@@ -5416,7 +5416,7 @@
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = E3AQ5SZNBE;
 						LastSwiftMigration = 0920;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -5668,7 +5668,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "./Fabric.framework/run 3a60a01ef50e4bc7872baab4a7e9acb54fc34720 fcbcb1653880bded943c0c37572ce7bdacff49d4bc7aa6e76a9992daab6bd54e";
+			shellScript = "./Fabric.framework/run 3a60a01ef50e4bc7872baab4a7e9acb54fc34720 fcbcb1653880bded943c0c37572ce7bdacff49d4bc7aa6e76a9992daab6bd54e\nbuildNumber=$(git rev-list HEAD | wc -l | tr -d ' ')\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"";
 		};
 		E78D0C9A1ED2F02800CB91FF /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -6941,7 +6941,7 @@
 				CODE_SIGN_ENTITLEMENTS = "qtum wallet/qtum wallet.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = E3AQ5SZNBE;
 				ENABLE_BITCODE = NO;
@@ -7032,8 +7032,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "blocksync.qtum-wallet";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "2ebd2dd6-2625-4a06-af9f-9e341093cd7d";
+				PROVISIONING_PROFILE_SPECIFIER = "QtumWallet-Dev";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
@@ -7050,7 +7050,7 @@
 				CODE_SIGN_ENTITLEMENTS = "qtum wallet/qtum wallet.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = E3AQ5SZNBE;
 				ENABLE_BITCODE = NO;
 				ENVIRONMENT = "";
@@ -7140,8 +7140,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "blocksync.qtum-wallet";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "2ebd2dd6-2625-4a06-af9f-9e341093cd7d";
+				PROVISIONING_PROFILE_SPECIFIER = "QtumWallet-Dev";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
