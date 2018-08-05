@@ -9,7 +9,7 @@
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
-	<string>$(APP_WATCH_BUNDLE)</string>
+	<string>blocksync.qtum-wallet.watchkitapp</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -31,7 +31,7 @@
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 	</array>
 	<key>WKCompanionAppBundleIdentifier</key>
-	<string>$(APP_BUNDLE_IDENTIFIER)</string>
+	<string>blocksync.qtum-wallet</string>
 	<key>WKWatchKitApp</key>
 	<true/>
 </dict>

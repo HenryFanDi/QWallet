@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "Appearance.h"
+#import <Fabric/Fabric.h>
+#import <Crashlytics/Crashlytics.h>
 
 @interface AppDelegate ()
 
@@ -34,6 +36,7 @@
 		}
 	});
 
+    [Fabric with:@[[Crashlytics class]]];
 	return YES;
 }
 

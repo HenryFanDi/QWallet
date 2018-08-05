@@ -11,7 +11,7 @@
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
-	<string>$(APP_BUNDLE_IDENTIFIER)</string>
+	<string>blocksync.qtum-wallet</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>$(CFBundleInfoDictionaryVersion)</string>
 	<key>CFBundleName</key>
@@ -34,7 +34,7 @@
 	<key>Fabric</key>
 	<dict>
 		<key>APIKey</key>
-		<string>$(FABRIC_API_KEY)</string>
+		<string>3a60a01ef50e4bc7872baab4a7e9acb54fc34720</string>
 		<key>Kits</key>
 		<array>
 			<dict>
