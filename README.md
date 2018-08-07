@@ -10,13 +10,25 @@ Designed with stability, modularity and interoperability in mind, Qtum is the fo
 To install CocoaPods on your computer.
 
 ```bash
-$ gem install cocoapods
+$ gem install cocoapods -v '~> 1.5.0'
+# or bundle install to install all necessary gems based on Gemfile
+$ bundle install
 ```
+
+A quick simple cleanup on stale/obsolete gems, removing older versions.
+```bash
+$ gem cleanup cocoapods \
+            cocoapods-core \
+            cocoapods-deintegrate \
+            cocoapods-downloader
+```
+
 > ios version 8+.
 
 Using Terminal open project folder and enter following command to load and connect required libraries
 
 ```bash
+# Firebase Core 5.1+ will be installed which requires cocoapod 1.4+
 $ pod install
 ```
 
@@ -26,6 +38,8 @@ You can install Carthage with [Homebrew](http://brew.sh/) using the following co
 
 ```bash
 $ brew update
+# Some older system ? does NOT have /usr/local/Frameworks
+$ sudo mkdir /usr/local/Frameworks && sudo chown -R $(whoami) /usr/local/Frameworks
 $ brew install carthage
 ```
 
