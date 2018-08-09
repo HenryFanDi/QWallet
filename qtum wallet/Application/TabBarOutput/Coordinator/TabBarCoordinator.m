@@ -11,6 +11,8 @@
 #import "NewsCoordinator.h"
 #import "SendCoordinator.h"
 #import "ProfileCoordinator.h"
+#import "UploadCoordinator.h"
+
 #import "AppDelegate.h"
 
 @interface TabBarCoordinator () <SendCoordinatorDelegate>
@@ -20,6 +22,7 @@
 @property (assign, nonatomic) BOOL sendAlreadyStarted;
 @property (assign, nonatomic) BOOL profileAlreadyStarted;
 @property (assign, nonatomic) BOOL newsAlreadyStarted;
+@property (nonatomic, assign) BOOL uploadAlreadyStarted;
 
 @property (weak, nonatomic) SendCoordinator *sendCoordinator;
 
@@ -97,6 +100,17 @@
 		[coordinator start];
 		[self addDependency:coordinator];
 	}
+}
+
+- (void)didSelectUploadTabWithController:(UIViewController *)controller {
+    if (!self.uploadAlreadyStarted) {
+        self.uploadAlreadyStarted = YES;
+        [self checkTabsController:controller];
+        
+        UploadCoordinator *coordinator = [[UploadCoordinator alloc] initWithNavigationController:(UINavigationController *)controller];
+        [coordinator start];
+        [self addDependency:coordinator];
+    }
 }
 
 - (void)checkTabsController:(UIViewController *) controller {

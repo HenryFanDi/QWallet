@@ -56,7 +56,9 @@
 		[self.outputDelegate didSelecteNewsTabWithController:viewController];
 	} else if (self.selectedIndex == 3) {
 		[self.outputDelegate didSelecteSendTabWithController:viewController];
-	}
+    } else if (self.selectedIndex == 4) {
+        [self.outputDelegate didSelectUploadTabWithController:viewController];
+    }
 }
 
 - (void)selectSendController {

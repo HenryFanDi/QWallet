@@ -6,6 +6,7 @@
 //  Copyright © 2016 QTUM. All rights reserved.
 //
 
+#import "UploadNavigationCoordinator.h"
 #import "SendNavigationCoordinator.h"
 #import "NewsNavigationController.h"
 #import "ProfileNavigationCoordinator.h"
@@ -51,6 +52,7 @@
 #import "InformationPopUpViewController.h"
 #import "AddressTransferPopupViewController.h"
 
+#import "UploadOutput.h"
 #import "NewPaymentOutput.h"
 #import "WalletOutput.h"
 #import "BalancePageOutput.h"
@@ -77,6 +79,12 @@
 #import "ConfirmPassphraseOutput.h"
 
 @implementation ControllersFactory
+
+- (UIViewController *)uploadFlowTab {
+    NSObject <UploadOutput> *controller = (NSObject <UploadOutput> *)[UIViewController controllerInStoryboard:@"Upload" withIdentifire:@"UploadViewController"];
+    UploadNavigationCoordinator *uploadNavigationCoordinator = [[UploadNavigationCoordinator alloc] initWithRootViewController:[controller toPresent]];
+    return uploadNavigationCoordinator;
+}
 
 - (UIViewController *)sendFlowTab {
 	SendNavigationCoordinator *nav = [[SendNavigationCoordinator alloc] init];
@@ -111,6 +119,11 @@
 	NSObject <BalancePageOutput> *controller = (NSObject <BalancePageOutput> *)[UIViewController controllerInStoryboard:@"Wallet" withIdentifire:@"BalancePageViewController"];
 	WalletNavigationController *nav = [[WalletNavigationController alloc] initWithRootViewController:[controller toPresent]];
 	return nav;
+}
+
+- (NSObject <UploadOutput> *)createUploadViewController {
+    NSObject <UploadOutput> *controller = (NSObject <UploadOutput> *)[UIViewController controllerInStoryboard:@"Upload" withIdentifire:@"UploadViewController"];
+    return controller;
 }
 
 - (NSObject <NewPaymentOutput> *)createNewPaymentDarkViewController {

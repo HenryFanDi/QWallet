@@ -479,6 +479,10 @@
 		D09F83991F7BB2DB002F3098 /* CopyLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = D09F83981F7BB2DB002F3098 /* CopyLabel.m */; };
 		D09F839C1F7BF308002F3098 /* QStoreCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = D09F839B1F7BF308002F3098 /* QStoreCategory.m */; };
 		D56B020D09B5747897E3EA15 /* libPods-qtum walletTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2601E5D944F526E1947C2A50 /* libPods-qtum walletTests.a */; };
+		D86B23CD211A60D300D5C5DB /* Upload.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D86B23CB211A60D300D5C5DB /* Upload.storyboard */; };
+		D86B23D5211A611700D5C5DB /* UploadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D86B23D4211A611700D5C5DB /* UploadViewController.m */; };
+		D86B23D8211A61C100D5C5DB /* UploadNavigationCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = D86B23D7211A61C100D5C5DB /* UploadNavigationCoordinator.m */; };
+		D8F784E3211D0091009897D7 /* UploadCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F784E2211D0091009897D7 /* UploadCoordinator.m */; };
 		E703530A1F039297004ECCC9 /* QStoreSearchTableSource.m in Sources */ = {isa = PBXBuildFile; fileRef = E70353091F039297004ECCC9 /* QStoreSearchTableSource.m */; };
 		E703530F1F03AC41004ECCC9 /* QStoreListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E703530E1F03AC41004ECCC9 /* QStoreListViewController.m */; };
 		E70353121F03AC59004ECCC9 /* QStoreListTableSource.m in Sources */ = {isa = PBXBuildFile; fileRef = E70353111F03AC59004ECCC9 /* QStoreListTableSource.m */; };
@@ -1792,6 +1796,17 @@
 		D09F839A1F7BF308002F3098 /* QStoreCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QStoreCategory.h; sourceTree = "<group>"; };
 		D09F839B1F7BF308002F3098 /* QStoreCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QStoreCategory.m; sourceTree = "<group>"; };
 		D71F3943F2787CBE5AE12D46 /* Pods-qtum walletTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-qtum walletTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-qtum walletTests/Pods-qtum walletTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D86B23CC211A60D300D5C5DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Upload.storyboard; sourceTree = "<group>"; };
+		D86B23D0211A60F700D5C5DB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Upload.strings; sourceTree = "<group>"; };
+		D86B23D2211A60F800D5C5DB /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Upload.strings"; sourceTree = "<group>"; };
+		D86B23D3211A611700D5C5DB /* UploadViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UploadViewController.h; sourceTree = "<group>"; };
+		D86B23D4211A611700D5C5DB /* UploadViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UploadViewController.m; sourceTree = "<group>"; };
+		D86B23D6211A61C100D5C5DB /* UploadNavigationCoordinator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UploadNavigationCoordinator.h; sourceTree = "<group>"; };
+		D86B23D7211A61C100D5C5DB /* UploadNavigationCoordinator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UploadNavigationCoordinator.m; sourceTree = "<group>"; };
+		D86B23D9211A633B00D5C5DB /* UploadOutput.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UploadOutput.h; sourceTree = "<group>"; };
+		D86B23DC211A635D00D5C5DB /* UploadOutputDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UploadOutputDelegate.h; sourceTree = "<group>"; };
+		D8F784E1211D0091009897D7 /* UploadCoordinator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UploadCoordinator.h; sourceTree = "<group>"; };
+		D8F784E2211D0091009897D7 /* UploadCoordinator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UploadCoordinator.m; sourceTree = "<group>"; };
 		E70353081F039297004ECCC9 /* QStoreSearchTableSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QStoreSearchTableSource.h; sourceTree = "<group>"; };
 		E70353091F039297004ECCC9 /* QStoreSearchTableSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QStoreSearchTableSource.m; sourceTree = "<group>"; };
 		E703530D1F03AC41004ECCC9 /* QStoreListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QStoreListViewController.h; sourceTree = "<group>"; };
@@ -2663,6 +2678,7 @@
 			isa = PBXGroup;
 			children = (
 				E73D9C861ECB0D1600A09CFE /* PopUp */,
+				D86B23CB211A60D300D5C5DB /* Upload.storyboard */,
 				E70CFCF71F1F63C500230C81 /* BackupRestore.storyboard */,
 				B32EEC861EB354B100512FED /* CreateToken.storyboard */,
 				B32EEC6D1EB3546800512FED /* News.storyboard */,
@@ -4115,6 +4131,21 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		D86B23CE211A60E600D5C5DB /* Upload */ = {
+			isa = PBXGroup;
+			children = (
+				D86B23D3211A611700D5C5DB /* UploadViewController.h */,
+				D86B23D4211A611700D5C5DB /* UploadViewController.m */,
+				D86B23D6211A61C100D5C5DB /* UploadNavigationCoordinator.h */,
+				D86B23D7211A61C100D5C5DB /* UploadNavigationCoordinator.m */,
+				D8F784E1211D0091009897D7 /* UploadCoordinator.h */,
+				D8F784E2211D0091009897D7 /* UploadCoordinator.m */,
+				D86B23D9211A633B00D5C5DB /* UploadOutput.h */,
+				D86B23DC211A635D00D5C5DB /* UploadOutputDelegate.h */,
+			);
+			path = Upload;
+			sourceTree = "<group>";
+		};
 		E70353071F039262004ECCC9 /* Search */ = {
 			isa = PBXGroup;
 			children = (
@@ -5052,6 +5083,7 @@
 		E7FD363A1DC4D07E00748177 /* qtum wallet */ = {
 			isa = PBXGroup;
 			children = (
+				D86B23CE211A60E600D5C5DB /* Upload */,
 				E7FD36601DC73B7900748177 /* Application */,
 				B31CF7271E126E05000BCF41 /* Auth and Login */,
 				E7DD00EF1DC9E5BD00FD5335 /* Categories */,
@@ -5506,6 +5538,7 @@
 				E78DD7641F4C2B6A00B25FB3 /* AddressTransferPopup.storyboard in Resources */,
 				B3045BF21FF23A6E003089F1 /* NoContractViewLight.xib in Resources */,
 				E70CFD571F1F66BF00230C81 /* SelectSearchTypeView.xib in Resources */,
+				D86B23CD211A60D300D5C5DB /* Upload.storyboard in Resources */,
 				E70CFD111F1F63F400230C81 /* InformationPopUp.storyboard in Resources */,
 				B321F2DC1EBB646100C813D0 /* euclidflexmedium.ttf in Resources */,
 				B3EA53131F471DBF002FD201 /* SelectSearchTypeViewLight.xib in Resources */,
@@ -5768,6 +5801,7 @@
 				B335794A1F348F8F001A0275 /* SplashViewControllerLight.m in Sources */,
 				E7D241D91DE6D6B1003E507B /* QRCodeManager.m in Sources */,
 				E760F49A1F0F89610056D042 /* TokenListViewControllerDark.m in Sources */,
+				D8F784E3211D0091009897D7 /* UploadCoordinator.m in Sources */,
 				E7DD00EA1DC9BF9D00FD5335 /* TransactionManager.m in Sources */,
 				B305A1141FCD85B600FC4D2F /* SendModuleRouter.m in Sources */,
 				B305A1291FD005F400FC4D2F /* QueryFunctionViewDark.m in Sources */,
@@ -5932,6 +5966,7 @@
 				E798462A1F0D1E40002A516A /* HistoryTableViewCellDark.m in Sources */,
 				B3F76A761EDD6F6400108DE9 /* TemplateModel.m in Sources */,
 				B30B115F1FC6CE3700E5ABBC /* WalletStoryboadFactory.m in Sources */,
+				D86B23D8211A61C100D5C5DB /* UploadNavigationCoordinator.m in Sources */,
 				E7360EC11F18EBED003ED21D /* ShareTokenPopUpViewController.m in Sources */,
 				B3E8B7921F4B2AD300DD7904 /* ConfirmPurchasePopUpViewControllerDark.m in Sources */,
 				B3F76A7D1EDDABBE00108DE9 /* NSDate+Extension.m in Sources */,
@@ -6203,6 +6238,7 @@
 				B3CD78D71F4DC1E100D79363 /* ChooseReciveAddressViewController.m in Sources */,
 				E7C9FAE31F7908ED005D08AD /* ConfirmPopUpViewControllerDark.m in Sources */,
 				B384F3DF1EB9BF4A0075F1E8 /* NSBundle+Language.m in Sources */,
+				D86B23D5211A611700D5C5DB /* UploadViewController.m in Sources */,
 				E739104F1DE2E165008145A8 /* HistoryElement.m in Sources */,
 				B31E5FFC1F4EE7F6003B4FA5 /* QStoreTemplateDetailViewController.m in Sources */,
 				B365059E1F14B63600521603 /* EnableFingerprintViewControllerDark.m in Sources */,
@@ -6436,6 +6472,16 @@
 			);
 			name = MainInterface.storyboard;
 			path = .;
+			sourceTree = "<group>";
+		};
+		D86B23CB211A60D300D5C5DB /* Upload.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D86B23CC211A60D300D5C5DB /* Base */,
+				D86B23D0211A60F700D5C5DB /* en */,
+				D86B23D2211A60F800D5C5DB /* zh-Hant */,
+			);
+			name = Upload.storyboard;
 			sourceTree = "<group>";
 		};
 		E70CFCF71F1F63C500230C81 /* BackupRestore.storyboard */ = {
@@ -6980,7 +7026,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/qtum wallet/Info.plist";
 				INFOPLIST_PREFIX_HEADER = "";
 				INFOPLIST_PREPROCESS = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -7088,7 +7134,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/qtum wallet/Info.plist";
 				INFOPLIST_PREFIX_HEADER = "";
 				INFOPLIST_PREPROCESS = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",

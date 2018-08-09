@@ -17,10 +17,11 @@
 
 - (void)selectSendController;
 
-- (void)setControllerForNews:(UIViewController *) newsController
-					 forSend:(UIViewController *) sendController
-				   forWallet:(UIViewController *) walletController
-				  forProfile:(UIViewController *) profileController;
+- (void)setControllerForNews:(UIViewController *)newsController
+					 forSend:(UIViewController *)sendController
+				   forWallet:(UIViewController *)walletController
+				  forProfile:(UIViewController *)profileController
+                   forUpload:(UIViewController *)uploadController;
 
 
 @end

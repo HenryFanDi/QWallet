@@ -49,6 +49,7 @@
 @class ConfirmPurchasePopUpViewController;
 @class AddressTransferPopupViewController;
 
+@protocol UploadOutput;
 @protocol NewPaymentOutput;
 @protocol WalletOutput;
 @protocol TokenListOutput;
@@ -92,6 +93,9 @@
 @interface ControllersFactory : NSObject
 
 //Controllers
+
+- (UIViewController *)uploadFlowTab;
+
 - (UIViewController *)profileFlowTab;
 
 - (UIViewController *)newsFlowTab;
@@ -103,6 +107,8 @@
 - (UIViewController *)changePinFlowController;
 
 - (UIViewController *)createPinFlowController;
+
+- (NSObject <UploadOutput> *)createUploadViewController;
 
 - (UIViewController *)createWalletFlowController;
 
