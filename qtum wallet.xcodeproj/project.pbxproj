@@ -4140,6 +4140,14 @@
 		D86B23CE211A60E600D5C5DB /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				D8F576BA2127B5EA007A6263 /* View */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		D8F576BA2127B5EA007A6263 /* View */ = {
+			isa = PBXGroup;
+			children = (
 				D86B23D9211A633B00D5C5DB /* MainOutput.h */,
 				D86B23DC211A635D00D5C5DB /* MainOutputDelegate.h */,
 				D8F784E1211D0091009897D7 /* MainCoordinator.h */,
@@ -4153,7 +4161,7 @@
 				D81F36FC2127B4050029E507 /* MainViewControllerLight.h */,
 				D81F36FD2127B4050029E507 /* MainViewControllerLight.m */,
 			);
-			path = Main;
+			path = View;
 			sourceTree = "<group>";
 		};
 		E70353071F039262004ECCC9 /* Search */ = {
