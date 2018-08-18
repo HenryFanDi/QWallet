@@ -484,6 +484,8 @@
 		D86B23CD211A60D300D5C5DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D86B23CB211A60D300D5C5DB /* Main.storyboard */; };
 		D86B23D5211A611700D5C5DB /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D86B23D4211A611700D5C5DB /* MainViewController.m */; };
 		D86B23D8211A61C100D5C5DB /* MainNavigationCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = D86B23D7211A61C100D5C5DB /* MainNavigationCoordinator.m */; };
+		D8F576BE2127B648007A6263 /* MainRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F576BD2127B648007A6263 /* MainRequestManager.m */; };
+		D8F576C12127B76B007A6263 /* MainNetworkingService.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F576C02127B76B007A6263 /* MainNetworkingService.m */; };
 		D8F784E3211D0091009897D7 /* MainCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F784E2211D0091009897D7 /* MainCoordinator.m */; };
 		E703530A1F039297004ECCC9 /* QStoreSearchTableSource.m in Sources */ = {isa = PBXBuildFile; fileRef = E70353091F039297004ECCC9 /* QStoreSearchTableSource.m */; };
 		E703530F1F03AC41004ECCC9 /* QStoreListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E703530E1F03AC41004ECCC9 /* QStoreListViewController.m */; };
@@ -1811,6 +1813,10 @@
 		D86B23D7211A61C100D5C5DB /* MainNavigationCoordinator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainNavigationCoordinator.m; sourceTree = "<group>"; };
 		D86B23D9211A633B00D5C5DB /* MainOutput.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainOutput.h; sourceTree = "<group>"; };
 		D86B23DC211A635D00D5C5DB /* MainOutputDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainOutputDelegate.h; sourceTree = "<group>"; };
+		D8F576BC2127B648007A6263 /* MainRequestManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainRequestManager.h; sourceTree = "<group>"; };
+		D8F576BD2127B648007A6263 /* MainRequestManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainRequestManager.m; sourceTree = "<group>"; };
+		D8F576BF2127B76A007A6263 /* MainNetworkingService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainNetworkingService.h; sourceTree = "<group>"; };
+		D8F576C02127B76B007A6263 /* MainNetworkingService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainNetworkingService.m; sourceTree = "<group>"; };
 		D8F784E1211D0091009897D7 /* MainCoordinator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainCoordinator.h; sourceTree = "<group>"; };
 		D8F784E2211D0091009897D7 /* MainCoordinator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainCoordinator.m; sourceTree = "<group>"; };
 		E70353081F039297004ECCC9 /* QStoreSearchTableSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QStoreSearchTableSource.h; sourceTree = "<group>"; };
@@ -4140,6 +4146,7 @@
 		D86B23CE211A60E600D5C5DB /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				D8F576BB2127B626007A6263 /* Request */,
 				D8F576BA2127B5EA007A6263 /* View */,
 			);
 			path = Main;
@@ -4162,6 +4169,17 @@
 				D81F36FD2127B4050029E507 /* MainViewControllerLight.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		D8F576BB2127B626007A6263 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				D8F576BF2127B76A007A6263 /* MainNetworkingService.h */,
+				D8F576C02127B76B007A6263 /* MainNetworkingService.m */,
+				D8F576BC2127B648007A6263 /* MainRequestManager.h */,
+				D8F576BD2127B648007A6263 /* MainRequestManager.m */,
+			);
+			path = Request;
 			sourceTree = "<group>";
 		};
 		E70353071F039262004ECCC9 /* Search */ = {
@@ -5828,6 +5846,7 @@
 				B3EE8F4E1F13767900131823 /* QRCodeViewControllerLight.m in Sources */,
 				B3DC9D271F31E9BB006B2E07 /* AddressTransferPopupViewControllerLight.m in Sources */,
 				B3EE8F421F136FAA00131823 /* ChooseTokenPaymentCellLight.m in Sources */,
+				D8F576C12127B76B007A6263 /* MainNetworkingService.m in Sources */,
 				B314410E1FB4624F004FE08C /* RemoveContractTrainigView.m in Sources */,
 				B3D5FE7A1F56F3B6006A2BF2 /* AbiParameterTypeDynamicArrayBool.m in Sources */,
 				B3054E301F0B9EE4001B1F63 /* SendCoordinator.m in Sources */,
@@ -6214,6 +6233,7 @@
 				B32B32D71ECCC2AC0081260A /* AbiinterfaceEntries.m in Sources */,
 				B3EC938B1FC8175A00752CD7 /* WatchTokensFacadeService.m in Sources */,
 				B33EAF231E5D6955006125F3 /* ExportWalletBrandKeyViewController.m in Sources */,
+				D8F576BE2127B648007A6263 /* MainRequestManager.m in Sources */,
 				B3EE8F3C1F136A9A00131823 /* ChoseTokenPaymentViewControllerLight.m in Sources */,
 				B36EBC341F2F15CC00F4E2F2 /* PhotoLibraryPopUpViewControllerDark.m in Sources */,
 				B3846DD61DFEFA6500D6872C /* UIAlertController+Extensions.m in Sources */,
