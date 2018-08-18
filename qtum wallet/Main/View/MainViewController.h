@@ -8,13 +8,18 @@
 
 #import <UIKit/UIKit.h>
 #import "Presentable.h"
-#import "WalletTableSource.h"
+#import "MainTableSource.h"
 #import "MainOutput.h"
 
 @class ViewWithAnimatedLine;
 
-@interface MainViewController : UIViewController <Presentable, ControllerDelegate, MainOutput>
-@property (strong, nonatomic) WalletTableSource *tableSource;
+@interface MainViewController : UIViewController <Presentable, MainControllerDelegate, MainOutput>
+
+@property (strong, nonatomic) MainTableSource *tableSource;
 @property (weak, nonatomic) id <MainOutputDelegate> delegate;
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
+- (void)configTableView;
 
 @end

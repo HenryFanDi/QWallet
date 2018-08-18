@@ -11,7 +11,11 @@
 
 @class LanguageCoordinator;
 
-@interface MainCoordinator : BaseCoordinator <Coordinatorable>
+@protocol MainCoordinatorDelegate <NSObject>
+
+@end
+
+@interface MainCoordinator : BaseCoordinator <MainCoordinatorDelegate, Coordinatorable>
 
 - (instancetype)initWithNavigationController:(UINavigationController *)navigationController;
 

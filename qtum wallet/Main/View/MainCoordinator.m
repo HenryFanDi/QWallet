@@ -8,10 +8,13 @@
 
 #import "MainCoordinator.h"
 #import "MainOutput.h"
+#import "MainTableSource.h"
 
 @interface MainCoordinator () <MainOutputDelegate>
-
 @property (nonatomic, strong) UINavigationController *navigationController;
+@property (nonatomic, weak) NSObject <MainOutput> *mainViewController;
+
+@property (nonatomic, strong) MainTableSource *delegateDataSource;
     
 @end
 
@@ -23,11 +26,27 @@
     self = [super init];
     if (self) {
         _navigationController = navigationController;
+        [self setup];
     }
     return self;
 }
 
 - (void)start {
+    NSObject <MainOutput> *controller = [SLocator.controllersFactory createMainViewController];
+    controller.delegate = self;
+    
+    self.delegateDataSource = [SLocator.tableSourcesFactory mainWalletSource];
+    self.delegateDataSource.delegate = self;
+    controller.tableSource = self.delegateDataSource;
+    self.mainViewController = controller;
+    
+    [self.navigationController setViewControllers:@[[controller toPresent]]];
+}
+
+#pragma mark - Private Methods
+
+- (void)setup {
+    self.navigationController.navigationBar.hidden = YES;
 }
 
 #pragma mark - MainOutputDelegate

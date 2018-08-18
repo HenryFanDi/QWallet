@@ -486,6 +486,9 @@
 		D86B23D8211A61C100D5C5DB /* MainNavigationCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = D86B23D7211A61C100D5C5DB /* MainNavigationCoordinator.m */; };
 		D8F576BE2127B648007A6263 /* MainRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F576BD2127B648007A6263 /* MainRequestManager.m */; };
 		D8F576C12127B76B007A6263 /* MainNetworkingService.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F576C02127B76B007A6263 /* MainNetworkingService.m */; };
+		D8F576C521285177007A6263 /* MainTableSource.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F576C421285177007A6263 /* MainTableSource.m */; };
+		D8F576C8212857AB007A6263 /* MainTableSourceDark.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F576C7212857AB007A6263 /* MainTableSourceDark.m */; };
+		D8F576CB212857B7007A6263 /* MainTableSourceLight.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F576CA212857B7007A6263 /* MainTableSourceLight.m */; };
 		D8F784E3211D0091009897D7 /* MainCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F784E2211D0091009897D7 /* MainCoordinator.m */; };
 		E703530A1F039297004ECCC9 /* QStoreSearchTableSource.m in Sources */ = {isa = PBXBuildFile; fileRef = E70353091F039297004ECCC9 /* QStoreSearchTableSource.m */; };
 		E703530F1F03AC41004ECCC9 /* QStoreListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E703530E1F03AC41004ECCC9 /* QStoreListViewController.m */; };
@@ -1818,6 +1821,12 @@
 		D8F576BF2127B76A007A6263 /* MainNetworkingService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainNetworkingService.h; sourceTree = "<group>"; };
 		D8F576C02127B76B007A6263 /* MainNetworkingService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainNetworkingService.m; sourceTree = "<group>"; };
 		D8F576C22127B94E007A6263 /* MainNetworkingServiceProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainNetworkingServiceProtocol.h; sourceTree = "<group>"; };
+		D8F576C321285177007A6263 /* MainTableSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainTableSource.h; sourceTree = "<group>"; };
+		D8F576C421285177007A6263 /* MainTableSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainTableSource.m; sourceTree = "<group>"; };
+		D8F576C6212857AB007A6263 /* MainTableSourceDark.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainTableSourceDark.h; sourceTree = "<group>"; };
+		D8F576C7212857AB007A6263 /* MainTableSourceDark.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainTableSourceDark.m; sourceTree = "<group>"; };
+		D8F576C9212857B7007A6263 /* MainTableSourceLight.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainTableSourceLight.h; sourceTree = "<group>"; };
+		D8F576CA212857B7007A6263 /* MainTableSourceLight.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainTableSourceLight.m; sourceTree = "<group>"; };
 		D8F784E1211D0091009897D7 /* MainCoordinator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainCoordinator.h; sourceTree = "<group>"; };
 		D8F784E2211D0091009897D7 /* MainCoordinator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainCoordinator.m; sourceTree = "<group>"; };
 		E70353081F039297004ECCC9 /* QStoreSearchTableSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QStoreSearchTableSource.h; sourceTree = "<group>"; };
@@ -4160,6 +4169,12 @@
 				D86B23DC211A635D00D5C5DB /* MainOutputDelegate.h */,
 				D8F784E1211D0091009897D7 /* MainCoordinator.h */,
 				D8F784E2211D0091009897D7 /* MainCoordinator.m */,
+				D8F576C321285177007A6263 /* MainTableSource.h */,
+				D8F576C421285177007A6263 /* MainTableSource.m */,
+				D8F576C6212857AB007A6263 /* MainTableSourceDark.h */,
+				D8F576C7212857AB007A6263 /* MainTableSourceDark.m */,
+				D8F576C9212857B7007A6263 /* MainTableSourceLight.h */,
+				D8F576CA212857B7007A6263 /* MainTableSourceLight.m */,
 				D86B23D6211A61C100D5C5DB /* MainNavigationCoordinator.h */,
 				D86B23D7211A61C100D5C5DB /* MainNavigationCoordinator.m */,
 				D86B23D3211A611700D5C5DB /* MainViewController.h */,
@@ -5940,9 +5955,11 @@
 				B3E159221ED6B1A200D70A87 /* AddNewTokensViewController.m in Sources */,
 				B305A1221FCF33DC00FC4D2F /* CallContractFacadeService.m in Sources */,
 				B30B11561FC6CDEC00E5ABBC /* ProfileStoryboardFactory.m in Sources */,
+				D8F576C521285177007A6263 /* MainTableSource.m in Sources */,
 				E7C101B81F13CBC700848526 /* BorderedLabelLight.m in Sources */,
 				E70353151F03AC6D004ECCC9 /* QStoreListTableViewCell.m in Sources */,
 				B33EAF171E5C7D45006125F3 /* FirstAuthViewController.m in Sources */,
+				D8F576C8212857AB007A6263 /* MainTableSourceDark.m in Sources */,
 				B351305D1E49BF6D0048A28C /* NewsController.m in Sources */,
 				B3DB3E4E1F2F706800AA408F /* RestoreContractsViewControllerLight.m in Sources */,
 				D09F83991F7BB2DB002F3098 /* CopyLabel.m in Sources */,
@@ -5965,6 +5982,7 @@
 				B3D012D81FB445CB00A98770 /* ContractInfoFacade.m in Sources */,
 				E7C101C41F15074A00848526 /* HistoryItemViewControllerLight.m in Sources */,
 				B3F06D031E699244006341F7 /* TokenCellSubscribe.m in Sources */,
+				D8F576CB212857B7007A6263 /* MainTableSourceLight.m in Sources */,
 				B3D5FE6D1F56F2C3006A2BF2 /* AbiParameterTypeFixedArrayInt.m in Sources */,
 				E726312A1EEAAC5B005AED8F /* TextFieldParameterView.m in Sources */,
 				B305A1111FCD804E00FC4D2F /* BaseRouter.m in Sources */,

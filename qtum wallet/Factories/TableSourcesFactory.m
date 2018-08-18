@@ -9,6 +9,8 @@
 #import "NSUserDefaults+Settings.h"
 #import "WalletTableSourceDark.h"
 #import "WalletTableSourceLight.h"
+#import "MainTableSourceDark.h"
+#import "MainTableSourceLight.h"
 #import "ChooseTokenPaymentDelegateDataSourceDark.h"
 #import "ChooseTokenPaymentDelegateDataSourceLight.h"
 #import "LibraryTableSource.h"
@@ -26,12 +28,19 @@
 #pragma mark - Methods
 
 - (WalletTableSource *)createWalletSource {
-
 	if ([NSUserDefaults isDarkSchemeSetting]) {
 		return [WalletTableSourceDark new];
 	} else {
 		return [WalletTableSourceLight new];
 	}
+}
+
+- (MainTableSource *)mainWalletSource {
+    if ([NSUserDefaults isDarkSchemeSetting]) {
+        return [MainTableSourceDark new];
+    } else {
+        return [MainTableSourceLight new];
+    }
 }
 
 - (NSObject <ChooseTokenPaymentDelegateDataSourceProtocol> *)createSendTokenPaymentSource {

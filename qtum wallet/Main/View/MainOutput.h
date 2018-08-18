@@ -9,11 +9,11 @@
 #import <Foundation/Foundation.h>
 #import "MainOutputDelegate.h"
 
-@class WalletTableSource;
+@class MainTableSource;
 
 @protocol MainOutput <NSObject>
 
-@property (nonatomic, strong) WalletTableSource *tableSource;
+@property (nonatomic, strong) MainTableSource *tableSource;
 @property (nonatomic, weak) id <MainOutputDelegate> delegate;
 
 - (void)reloadTableView;

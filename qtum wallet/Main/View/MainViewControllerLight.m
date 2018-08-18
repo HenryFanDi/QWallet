@@ -24,4 +24,15 @@
     [super didReceiveMemoryWarning];
 }
 
+#pragma mark - Private Methods
+
+- (void)configTableView {
+    [super configTableView];
+    
+    self.tableView.scrollIndicatorInsets = UIEdgeInsetsMake (64, 0, 0, 0);
+    
+    UINib *sectionHeaderNib = [UINib nibWithNibName:@"HistoryTableHeaderViewLight" bundle:nil];
+    [self.tableView registerNib:sectionHeaderNib forHeaderFooterViewReuseIdentifier:SectionHeaderViewIdentifier];
+}
+
 @end

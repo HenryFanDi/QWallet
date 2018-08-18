@@ -12,7 +12,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UIView *headerView;
 @property (weak, nonatomic) IBOutlet UILabel *availableLabel;
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UIView *viewForHeaderInSecondSection;
 @property (weak, nonatomic) IBOutlet UILabel *activityLabel;
 
@@ -24,10 +23,26 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self configTableView];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+
+#pragma mark - Private Methods
+
+- (void)configTableView {
+    self.tableView.tableFooterView = [UIView new];
+    self.tableView.dataSource = self.tableSource;
+    self.tableView.delegate = self.tableSource;
+    self.tableSource.tableView = self.tableView;
+    self.tableSource.controllerDelegate = self;
 }
 
 #pragma mark - MainOutput

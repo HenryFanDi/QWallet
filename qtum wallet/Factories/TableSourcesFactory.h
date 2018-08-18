@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @class WalletTableSource;
+@class MainTableSource;
+
 @protocol ChooseTokenPaymentDelegateDataSourceProtocol;
 @protocol LibraryTableSourceOutput;
 @protocol FavouriteTemplatesCollectionSourceOutput;
@@ -20,6 +22,8 @@
 @interface TableSourcesFactory : NSObject
 
 - (WalletTableSource *)createWalletSource;
+
+- (MainTableSource *)mainWalletSource;
 
 - (NSObject <ChooseTokenPaymentDelegateDataSourceProtocol> *)createSendTokenPaymentSource;
 
