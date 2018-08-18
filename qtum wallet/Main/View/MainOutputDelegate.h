@@ -10,4 +10,13 @@
 
 @protocol MainOutputDelegate <NSObject>
 
+@required
+- (void)didReloadTableViewData;
+
+- (void)didRefreshTableViewBalanceLocal:(BOOL)isLocal;
+
+- (void)didShowQRCodeScan;
+
+- (void)didShowAddressControl;
+
 @end

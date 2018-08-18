@@ -30,4 +30,22 @@
 - (void)start {
 }
 
+#pragma mark - MainOutputDelegate
+
+- (void)didReloadTableViewData {
+    
+}
+
+- (void)didRefreshTableViewBalanceLocal:(BOOL)isLocal {
+    
+}
+
+- (void)didShowQRCodeScan {
+    
+}
+
+- (void)didShowAddressControl {
+    
+}
+
 @end
