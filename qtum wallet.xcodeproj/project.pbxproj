@@ -1817,6 +1817,7 @@
 		D8F576BD2127B648007A6263 /* MainRequestManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainRequestManager.m; sourceTree = "<group>"; };
 		D8F576BF2127B76A007A6263 /* MainNetworkingService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainNetworkingService.h; sourceTree = "<group>"; };
 		D8F576C02127B76B007A6263 /* MainNetworkingService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainNetworkingService.m; sourceTree = "<group>"; };
+		D8F576C22127B94E007A6263 /* MainNetworkingServiceProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainNetworkingServiceProtocol.h; sourceTree = "<group>"; };
 		D8F784E1211D0091009897D7 /* MainCoordinator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainCoordinator.h; sourceTree = "<group>"; };
 		D8F784E2211D0091009897D7 /* MainCoordinator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainCoordinator.m; sourceTree = "<group>"; };
 		E70353081F039297004ECCC9 /* QStoreSearchTableSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QStoreSearchTableSource.h; sourceTree = "<group>"; };
@@ -4174,6 +4175,7 @@
 		D8F576BB2127B626007A6263 /* Request */ = {
 			isa = PBXGroup;
 			children = (
+				D8F576C22127B94E007A6263 /* MainNetworkingServiceProtocol.h */,
 				D8F576BF2127B76A007A6263 /* MainNetworkingService.h */,
 				D8F576C02127B76B007A6263 /* MainNetworkingService.m */,
 				D8F576BC2127B648007A6263 /* MainRequestManager.h */,

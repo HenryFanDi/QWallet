@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "MainNetworkingServiceProtocol.h"
 
-@interface MainNetworkingService : NSObject
+@interface MainNetworkingService : NSObject <MainNetworkingServiceProtocol>
 
 @end
