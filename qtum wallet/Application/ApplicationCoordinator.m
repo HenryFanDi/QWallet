@@ -291,11 +291,12 @@
 	self.loginFlowRunning = NO;
 
 	UITabBarController <TabbarOutput> *controller = [SLocator.controllersFactory createTabFlow];
+    UIViewController *main = [SLocator.controllersFactory mainFlowTab];
 	UIViewController *news = [SLocator.controllersFactory newsFlowTab];
 	UIViewController *send = [SLocator.controllersFactory sendFlowTab];
 	UIViewController *profile = [SLocator.controllersFactory profileFlowTab];
 	UIViewController *wallet = [SLocator.controllersFactory walletFlowTab];
-	[controller setControllerForNews:news forSend:send forWallet:wallet forProfile:profile];
+    [controller setControllerForNews:news forSend:send forWallet:wallet forProfile:profile forMain:main];
 	TabBarCoordinator *coordinator = [[TabBarCoordinator alloc] initWithTabBarController:controller];
 	controller.outputDelegate = coordinator;
 	self.tabCoordinator = coordinator;
@@ -320,11 +321,12 @@
 
 	UITabBarController <TabbarOutput> *controller = [SLocator.controllersFactory createTabFlow];
 	controller.isReload = YES;
+    UIViewController *main = [SLocator.controllersFactory mainFlowTab];
 	UIViewController *news = [SLocator.controllersFactory newsFlowTab];
 	UIViewController *send = [SLocator.controllersFactory sendFlowTab];
 	UIViewController *profile = [SLocator.controllersFactory profileFlowTab];
 	UIViewController *wallet = [SLocator.controllersFactory walletFlowTab];
-	[controller setControllerForNews:news forSend:send forWallet:wallet forProfile:profile];
+    [controller setControllerForNews:news forSend:send forWallet:wallet forProfile:profile forMain:main];
 	TabBarCoordinator *coordinator = [[TabBarCoordinator alloc] initWithTabBarController:controller];
 	self.tabCoordinator = coordinator;
 	[self addDependency:coordinator];

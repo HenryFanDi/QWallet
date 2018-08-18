@@ -6,6 +6,7 @@
 //  Copyright © 2016 QTUM. All rights reserved.
 //
 
+#import "MainNavigationCoordinator.h"
 #import "SendNavigationCoordinator.h"
 #import "NewsNavigationController.h"
 #import "ProfileNavigationCoordinator.h"
@@ -51,6 +52,7 @@
 #import "InformationPopUpViewController.h"
 #import "AddressTransferPopupViewController.h"
 
+#import "MainOutput.h"
 #import "NewPaymentOutput.h"
 #import "WalletOutput.h"
 #import "BalancePageOutput.h"
@@ -77,6 +79,12 @@
 #import "ConfirmPassphraseOutput.h"
 
 @implementation ControllersFactory
+
+- (UIViewController *)mainFlowTab {
+    NSObject <MainOutput> *controller = (NSObject <MainOutput> *)[UIViewController controllerInStoryboard:@"Main" withIdentifire:@"MainViewController"];
+    MainNavigationCoordinator *mainNavigationCoordinator = [[MainNavigationCoordinator alloc] initWithRootViewController:[controller toPresent]];
+    return mainNavigationCoordinator;
+}
 
 - (UIViewController *)sendFlowTab {
 	SendNavigationCoordinator *nav = [[SendNavigationCoordinator alloc] init];
@@ -111,6 +119,11 @@
 	NSObject <BalancePageOutput> *controller = (NSObject <BalancePageOutput> *)[UIViewController controllerInStoryboard:@"Wallet" withIdentifire:@"BalancePageViewController"];
 	WalletNavigationController *nav = [[WalletNavigationController alloc] initWithRootViewController:[controller toPresent]];
 	return nav;
+}
+
+- (NSObject <MainOutput> *)createMainViewController {
+    NSObject <MainOutput> *controller = (NSObject <MainOutput> *)[UIViewController controllerInStoryboard:@"Main" withIdentifire:@"MainViewController"];
+    return controller;
 }
 
 - (NSObject <NewPaymentOutput> *)createNewPaymentDarkViewController {
