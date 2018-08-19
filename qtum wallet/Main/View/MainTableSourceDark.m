@@ -27,7 +27,7 @@
                 return 100.0;
         }
     } else {
-        return 75.0;
+        return 80.0;
     }
 }
 
