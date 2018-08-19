@@ -9,6 +9,7 @@
 #import "MainTableSourceDark.h"
 #import "WalletHeaderCellDark.h"
 #import "HistoryTableViewCellDark.h"
+#import "MainTableViewCellDark.h"
 
 @implementation MainTableSourceDark
 
@@ -23,7 +24,7 @@
                 return 152.0;
             case HeaderCellTypeAllVisible:
             default:
-                return 212.0;
+                return 100.0;
         }
     } else {
         return 75.0;
@@ -42,11 +43,7 @@
         self.mainCell = cell;
         return cell;
     } else {
-        HistoryTableViewCellDark *cell = [tableView dequeueReusableCellWithIdentifier:@"HistoryTableViewCellDark"];
-        
-//        HistoryElement *element = self.wallet.historyStorage.historyPrivate[indexPath.row];
-//        cell.historyElement = element;
-        [cell changeHighlight:NO];
+        MainTableViewCellDark *cell = [tableView dequeueReusableCellWithIdentifier:@"MainTableViewCellDark"];
         return cell;
     }
 }

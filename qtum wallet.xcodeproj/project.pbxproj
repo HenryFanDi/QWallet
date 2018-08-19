@@ -481,6 +481,9 @@
 		D56B020D09B5747897E3EA15 /* libPods-qtum walletTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2601E5D944F526E1947C2A50 /* libPods-qtum walletTests.a */; };
 		D81F36FB2127B3C20029E507 /* MainViewControllerDark.m in Sources */ = {isa = PBXBuildFile; fileRef = D81F36FA2127B3C20029E507 /* MainViewControllerDark.m */; };
 		D81F36FE2127B4050029E507 /* MainViewControllerLight.m in Sources */ = {isa = PBXBuildFile; fileRef = D81F36FD2127B4050029E507 /* MainViewControllerLight.m */; };
+		D85E46EF212A28860041F8B2 /* MainTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D85E46EE212A28860041F8B2 /* MainTableViewCell.m */; };
+		D85E46F2212A28D50041F8B2 /* MainTableViewCellDark.m in Sources */ = {isa = PBXBuildFile; fileRef = D85E46F1212A28D50041F8B2 /* MainTableViewCellDark.m */; };
+		D85E46F5212A28E00041F8B2 /* MainTableViewCellLight.m in Sources */ = {isa = PBXBuildFile; fileRef = D85E46F4212A28E00041F8B2 /* MainTableViewCellLight.m */; };
 		D86B23CD211A60D300D5C5DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D86B23CB211A60D300D5C5DB /* Main.storyboard */; };
 		D86B23D5211A611700D5C5DB /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D86B23D4211A611700D5C5DB /* MainViewController.m */; };
 		D86B23D8211A61C100D5C5DB /* MainNavigationCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = D86B23D7211A61C100D5C5DB /* MainNavigationCoordinator.m */; };
@@ -1807,6 +1810,12 @@
 		D81F36FA2127B3C20029E507 /* MainViewControllerDark.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewControllerDark.m; sourceTree = "<group>"; };
 		D81F36FC2127B4050029E507 /* MainViewControllerLight.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewControllerLight.h; sourceTree = "<group>"; };
 		D81F36FD2127B4050029E507 /* MainViewControllerLight.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewControllerLight.m; sourceTree = "<group>"; };
+		D85E46ED212A28860041F8B2 /* MainTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainTableViewCell.h; sourceTree = "<group>"; };
+		D85E46EE212A28860041F8B2 /* MainTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainTableViewCell.m; sourceTree = "<group>"; };
+		D85E46F0212A28D50041F8B2 /* MainTableViewCellDark.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainTableViewCellDark.h; sourceTree = "<group>"; };
+		D85E46F1212A28D50041F8B2 /* MainTableViewCellDark.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainTableViewCellDark.m; sourceTree = "<group>"; };
+		D85E46F3212A28E00041F8B2 /* MainTableViewCellLight.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainTableViewCellLight.h; sourceTree = "<group>"; };
+		D85E46F4212A28E00041F8B2 /* MainTableViewCellLight.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainTableViewCellLight.m; sourceTree = "<group>"; };
 		D86B23CC211A60D300D5C5DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D86B23D0211A60F700D5C5DB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		D86B23D2211A60F800D5C5DB /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
@@ -4153,11 +4162,25 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		D85E46EC212A24DB0041F8B2 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				D85E46ED212A28860041F8B2 /* MainTableViewCell.h */,
+				D85E46EE212A28860041F8B2 /* MainTableViewCell.m */,
+				D85E46F0212A28D50041F8B2 /* MainTableViewCellDark.h */,
+				D85E46F1212A28D50041F8B2 /* MainTableViewCellDark.m */,
+				D85E46F3212A28E00041F8B2 /* MainTableViewCellLight.h */,
+				D85E46F4212A28E00041F8B2 /* MainTableViewCellLight.m */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		D86B23CE211A60E600D5C5DB /* Main */ = {
 			isa = PBXGroup;
 			children = (
 				D8F576BB2127B626007A6263 /* Request */,
 				D8F576BA2127B5EA007A6263 /* View */,
+				D85E46EC212A24DB0041F8B2 /* Cell */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -6120,6 +6143,7 @@
 				B305A11F1FCEC9DC00FC4D2F /* KeychainStorage.m in Sources */,
 				E745BA241F21FC3600B2E216 /* NewsViewControllerLight.m in Sources */,
 				B33EAF131E5C70EF006125F3 /* LoginViewController.m in Sources */,
+				D85E46EF212A28860041F8B2 /* MainTableViewCell.m in Sources */,
 				B3A4EA4F1F502C2D008115D1 /* NSNumber+Comparison.m in Sources */,
 				B30355301F163E1900E64E46 /* ConfirmPinForExportViewControllerDark.m in Sources */,
 				B3DB3E5F1F306CEA00AA408F /* BackupContractsViewControllerDark.m in Sources */,
@@ -6177,6 +6201,7 @@
 				B3EE8F311F13529600131823 /* ChooseTokenPaymentDelegateDataSourceDark.m in Sources */,
 				B39048671FDFEE6900D5F735 /* TemplatesHeaderCell.m in Sources */,
 				E784F8CA1F025DDB00A513BF /* SourceCodePopUpViewController.m in Sources */,
+				D85E46F5212A28E00041F8B2 /* MainTableViewCellLight.m in Sources */,
 				B3141E561F3090A60095E3DF /* AbiTextFieldWithLineLight.m in Sources */,
 				B369DF381F5D672E008B81CB /* AbiParameterTypeElementaryArray.m in Sources */,
 				B3D012DB1FB44CC400A98770 /* ContracBalancesObject.m in Sources */,
@@ -6252,6 +6277,7 @@
 				B3D5FE8C1F57F72B006A2BF2 /* AbiParameterTypeFixedArrayBytes.m in Sources */,
 				B32B32D71ECCC2AC0081260A /* AbiinterfaceEntries.m in Sources */,
 				B3EC938B1FC8175A00752CD7 /* WatchTokensFacadeService.m in Sources */,
+				D85E46F2212A28D50041F8B2 /* MainTableViewCellDark.m in Sources */,
 				B33EAF231E5D6955006125F3 /* ExportWalletBrandKeyViewController.m in Sources */,
 				D8F576BE2127B648007A6263 /* MainRequestManager.m in Sources */,
 				B3EE8F3C1F136A9A00131823 /* ChoseTokenPaymentViewControllerLight.m in Sources */,
