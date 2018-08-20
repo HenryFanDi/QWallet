@@ -15,8 +15,8 @@
 
 @interface MainViewController : UIViewController <Presentable, MainControllerDelegate, MainOutput>
 
-@property (strong, nonatomic) MainTableSource *tableSource;
-@property (weak, nonatomic) id <MainOutputDelegate> delegate;
+@property (nonatomic, strong) MainTableSource *tableSource;
+@property (nonatomic, weak) id <MainOutputDelegate> delegate;
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 

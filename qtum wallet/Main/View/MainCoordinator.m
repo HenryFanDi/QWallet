@@ -8,9 +8,10 @@
 
 #import "MainCoordinator.h"
 #import "MainOutput.h"
+#import "DetailOutput.h"
 #import "MainTableSource.h"
 
-@interface MainCoordinator () <MainOutputDelegate>
+@interface MainCoordinator () <MainOutputDelegate, DetailOutputDelegate>
 @property (nonatomic, strong) UINavigationController *navigationController;
 @property (nonatomic, weak) NSObject <MainOutput> *mainViewController;
 
@@ -49,6 +50,14 @@
     self.navigationController.navigationBar.hidden = YES;
 }
 
+#pragma mark - MainCoordinatorDelegate
+
+- (void)didSelectFileItem:(id)item {
+    NSObject <DetailOutput> *controller = [SLocator.controllersFactory createDetailViewController];
+    controller.delegate = self;
+    [self.navigationController pushViewController:[controller toPresent] animated:YES];
+}
+
 #pragma mark - MainOutputDelegate
 
 - (void)didReloadTableViewData {
@@ -66,5 +75,7 @@
 - (void)didShowAddressControl {
     
 }
+
+#pragma mark - DetailOutputDelegate
 
 @end

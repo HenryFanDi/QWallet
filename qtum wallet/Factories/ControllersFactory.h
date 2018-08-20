@@ -50,6 +50,7 @@
 @class AddressTransferPopupViewController;
 
 @protocol MainOutput;
+@protocol DetailOutput;
 @protocol NewPaymentOutput;
 @protocol WalletOutput;
 @protocol TokenListOutput;
@@ -109,6 +110,8 @@
 - (UIViewController *)createPinFlowController;
 
 - (NSObject <MainOutput> *)createMainViewController;
+
+- (NSObject <DetailOutput> *)createDetailViewController;
 
 - (UIViewController *)createWalletFlowController;
 

@@ -38,7 +38,7 @@
                                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My BSX" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SDZ-id-xS3" userLabel="Title Label">
-                                                <rect key="frame" x="157.5" y="10" width="61.5" height="23"/>
+                                                <rect key="frame" x="157" y="10" width="61.5" height="23"/>
                                                 <fontDescription key="fontDescription" name="euclidflexmedium" family="euclidflexmedium" pointSize="18"/>
                                                 <color key="textColor" red="0.13725490200000001" green="0.13725490200000001" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -137,13 +137,13 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="16800.00 BSX" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GOU-MK-psH">
-                                                            <rect key="frame" x="85.5" y="20" width="204.5" height="34"/>
+                                                            <rect key="frame" x="86" y="20" width="204.5" height="34"/>
                                                             <fontDescription key="fontDescription" name="simplonmono-medium" family="simplonmono" pointSize="28"/>
                                                             <color key="textColor" red="0.13725490200000001" green="0.13725490200000001" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Available Balance" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="grP-r1-RRe">
-                                                            <rect key="frame" x="125.5" y="56" width="124.5" height="14"/>
+                                                            <rect key="frame" x="126" y="56" width="124.5" height="14"/>
                                                             <fontDescription key="fontDescription" name="simplonmono-regular" family="simplonmono" pointSize="12"/>
                                                             <color key="textColor" red="0.13725490200000001" green="0.13725490200000001" blue="0.15686274510000001" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -266,7 +266,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aug 17" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DE2-sN-iU0">
-                                                    <rect key="frame" x="324" y="10" width="41" height="13"/>
+                                                    <rect key="frame" x="324.5" y="10" width="40.5" height="13"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="13" id="YsJ-bh-cda"/>
@@ -333,7 +333,7 @@
                                 <rect key="frame" x="0.0" y="114" width="375" height="32"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Activity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iRX-XA-b2R" userLabel="Activity Label">
-                                        <rect key="frame" x="10" y="8.5" width="43" height="15.5"/>
+                                        <rect key="frame" x="10" y="9" width="43" height="15.5"/>
                                         <fontDescription key="fontDescription" name="euclidflexmedium" family="euclidflexmedium" pointSize="12"/>
                                         <color key="textColor" red="0.18823529410000001" green="0.60392156860000001" blue="0.81568627449999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -389,6 +389,21 @@
             </objects>
             <point key="canvasLocation" x="-594.39999999999998" y="-45.42728635682159"/>
         </scene>
+        <!--Detail View Controller Dark-->
+        <scene sceneID="f19-nv-vvr">
+            <objects>
+                <viewController storyboardIdentifier="DetailViewControllerDark" useStoryboardIdentifierAsRestorationIdentifier="YES" id="8jH-aQ-i2x" customClass="DetailViewControllerDark" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5Ko-P5-jCc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.13725490200000001" green="0.13725490200000001" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="DUC-yU-4s6"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bo4-Rc-QCh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="159" y="-46"/>
+        </scene>
         <!--Main View Controller Light-->
         <scene sceneID="4DQ-8l-cuc">
             <objects>
@@ -403,6 +418,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="srx-bq-Drr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-597" y="643"/>
+        </scene>
+        <!--Detail View Controller Light-->
+        <scene sceneID="vY7-Fw-Od3">
+            <objects>
+                <viewController storyboardIdentifier="DetailViewControllerLight" useStoryboardIdentifierAsRestorationIdentifier="YES" id="XIt-m2-vgr" customClass="DetailViewControllerLight" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ywV-tv-wH0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="XbK-ej-Xcr"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oaA-bg-ece" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="159" y="643"/>
         </scene>
     </scenes>
     <resources>

@@ -79,7 +79,8 @@
         [identifire isEqualToString:@"ConfirmPopUpViewController"] ||
         [identifire isEqualToString:@"NewsDetailViewController"] ||
         [identifire isEqualToString:@"ConfirmPassphraseViewController"] ||
-        [identifire isEqualToString:@"MainViewController"]) {
+        [identifire isEqualToString:@"MainViewController"] ||
+        [identifire isEqualToString:@"DetailViewController"]) {
 		if ([NSUserDefaults isDarkSchemeSetting]) {
 			[mutString appendString:@"Dark"];
 		} else {

@@ -53,6 +53,7 @@
 #import "AddressTransferPopupViewController.h"
 
 #import "MainOutput.h"
+#import "DetailOutput.h"
 #import "NewPaymentOutput.h"
 #import "WalletOutput.h"
 #import "BalancePageOutput.h"
@@ -103,8 +104,6 @@
 	return nav;
 }
 
-
-
 - (UITabBarController <TabbarOutput> *)createTabFlow {
 
 	if ([NSUserDefaults isDarkSchemeSetting]) {
@@ -123,6 +122,11 @@
 
 - (NSObject <MainOutput> *)createMainViewController {
     NSObject <MainOutput> *controller = (NSObject <MainOutput> *)[UIViewController controllerInStoryboard:@"Main" withIdentifire:@"MainViewController"];
+    return controller;
+}
+
+- (NSObject <DetailOutput> *)createDetailViewController {
+    NSObject <DetailOutput> *controller = (NSObject <DetailOutput> *)[UIViewController controllerInStoryboard:@"Main" withIdentifire:@"DetailViewController"];
     return controller;
 }
 

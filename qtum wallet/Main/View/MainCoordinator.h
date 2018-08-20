@@ -12,6 +12,7 @@
 @class LanguageCoordinator;
 
 @protocol MainCoordinatorDelegate <NSObject>
+- (void)didSelectFileItem:(id)item;
 
 @end
 
