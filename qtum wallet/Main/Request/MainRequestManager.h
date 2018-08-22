@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "MainRequestable.h"
 
-@interface MainRequestManager : NSObject
+@interface MainRequestManager : NSObject <MainRequestable>
+
+- (instancetype)initWithBaseUrl:(NSString *)baseUrl;
 
 @end

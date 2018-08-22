@@ -1813,6 +1813,7 @@
 		D81F36FA2127B3C20029E507 /* MainViewControllerDark.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewControllerDark.m; sourceTree = "<group>"; };
 		D81F36FC2127B4050029E507 /* MainViewControllerLight.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewControllerLight.h; sourceTree = "<group>"; };
 		D81F36FD2127B4050029E507 /* MainViewControllerLight.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewControllerLight.m; sourceTree = "<group>"; };
+		D837D7CF212E217400391FC9 /* MainRequestable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainRequestable.h; sourceTree = "<group>"; };
 		D85E46ED212A28860041F8B2 /* MainTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainTableViewCell.h; sourceTree = "<group>"; };
 		D85E46EE212A28860041F8B2 /* MainTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainTableViewCell.m; sourceTree = "<group>"; };
 		D85E46F0212A28D50041F8B2 /* MainTableViewCellDark.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainTableViewCellDark.h; sourceTree = "<group>"; };
@@ -4250,6 +4251,7 @@
 				D8F576C22127B94E007A6263 /* MainNetworkingServiceProtocol.h */,
 				D8F576BF2127B76A007A6263 /* MainNetworkingService.h */,
 				D8F576C02127B76B007A6263 /* MainNetworkingService.m */,
+				D837D7CF212E217400391FC9 /* MainRequestable.h */,
 				D8F576BC2127B648007A6263 /* MainRequestManager.h */,
 				D8F576BD2127B648007A6263 /* MainRequestManager.m */,
 			);

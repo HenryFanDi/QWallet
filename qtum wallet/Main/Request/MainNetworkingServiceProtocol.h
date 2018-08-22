@@ -11,7 +11,9 @@
 
 @protocol MainNetworkingServiceProtocol <NSObject>
 
-- (instancetype _Nullable)initWithBaseUrl:(NSString *_Nonnull) baseUrl;
+- (instancetype _Nullable)initWithBaseUrl:(NSString *_Nonnull)baseUrl;
+
+- (void)uploadTask:(NSURL *)URL data:(NSData *)data success:(void (^)(id responseObject))success failure:(void (^)(NSError *error))failure;
 
 - (void)requestWithType:(RequestType)type
                    path:(NSString *_Nonnull)path
