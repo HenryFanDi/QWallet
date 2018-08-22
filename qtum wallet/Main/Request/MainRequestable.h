@@ -10,6 +10,6 @@
 
 @protocol MainRequestable <NSObject>
 
-- (void)uploadFile:(NSData *)data success:(void (^)(id responseObject))success failure:(void (^)(NSError *error))failure;
+- (void)uploadFile:(NSData *)data name:(NSString *)name fileName:(NSString *)fileName mimeType:(NSString *)mimeType success:(void (^)(id responseObject))success failure:(void (^)(NSError *error))failure;
 
 @end

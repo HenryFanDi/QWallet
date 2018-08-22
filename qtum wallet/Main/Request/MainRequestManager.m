@@ -8,6 +8,7 @@
 
 #import "MainRequestManager.h"
 #import "MainNetworkingService.h"
+#import "AFNetworking.h"
 
 @interface MainRequestManager ()
 @property (strong, nonatomic) MainNetworkingService *networkService;
@@ -27,9 +28,15 @@
 
 #pragma mark - Upload
 
-- (void)uploadFile:(NSData *)data success:(void (^)(id responseObject))success failure:(void (^)(NSError *error))failure {
-    NSURL *URL = [NSURL URLWithString:@"http://ipfs.joecwu.com:5001/api/v0/add"];
-    [self.networkService uploadTask:URL data:data success:success failure:failure];
+- (void)uploadFile:(NSData *)data name:(NSString *)name fileName:(NSString *)fileName mimeType:(NSString *)mimeType success:(void (^)(id responseObject))success failure:(void (^)(NSError *error))failure {
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    [manager POST:@"http://ipfs.joecwu.com:5001/api/v0/add" parameters:nil constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+        [formData appendPartWithFileData:data name:name fileName:fileName mimeType:mimeType];
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
+        success(responseObject);
+    } failure:^(NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error) {
+        failure(error);
+    }];
 }
 
 #pragma mark - Balance

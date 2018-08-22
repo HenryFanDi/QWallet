@@ -10,6 +10,7 @@
 #import "MainOutput.h"
 #import "DetailOutput.h"
 #import "MainTableSource.h"
+#import "MainRequestManager.h"
 
 @interface MainCoordinator () <MainOutputDelegate, DetailOutputDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 @property (nonatomic, strong) UINavigationController *navigationController;
@@ -112,6 +113,15 @@
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
     [picker dismissViewControllerAnimated:YES completion:nil];
+    UIImage *image = info[UIImagePickerControllerOriginalImage];
+    NSData *imageData = UIImageJPEGRepresentation(image, 0.1);
+    NSString *imageName = @"image.jpg";
+    MainRequestManager *requestManager = [MainRequestManager new];
+    [requestManager uploadFile:imageData name:imageName fileName:imageName mimeType:@"image/jpg" success:^(id responseObject) {
+        NSLog(@"Upload success : %@", responseObject);
+    } failure:^(NSError *error) {
+        NSLog(@"Upload failure : %@", [error localizedDescription]);
+    }];
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {

@@ -49,19 +49,6 @@
 
 #pragma mark - Public Methods
 
-- (void)uploadTask:(NSURL *)URL data:(NSData *)data success:(void (^)(id responseObject))success failure:(void (^)(NSError *error))failure {
-    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:URL];
-    AFURLSessionManager *manager = [AFURLSessionManager new];
-    NSURLSessionUploadTask *uploadTask = [manager uploadTaskWithRequest:request fromData:data progress:nil completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
-        if (error) {
-            failure(error);
-        } else {
-            success(responseObject);
-        }
-    }];
-    [uploadTask resume];
-}
-
 - (void)requestWithType:(RequestType)type path:(NSString *)path andParams:(NSDictionary *)param withSuccessHandler:(void (^)(id _Nonnull responseObject))success andFailureHandler:(void (^)(NSError *_Nonnull error, NSString *message))failure {
     if (type == POST) {
         [self.requestManager POST:path parameters:param success:^(AFHTTPRequestOperation *_Nonnull operation, id _Nonnull responseObject) {
