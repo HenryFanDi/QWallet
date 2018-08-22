@@ -83,4 +83,10 @@
     self.viewForHeaderInSecondSection.hidden = YES;
 }
 
+#pragma mark - IBAction
+
+- (IBAction)actionButtonDidPress:(id)sender {
+    [self.delegate didUploadFile];
+}
+
 @end

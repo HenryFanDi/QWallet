@@ -15,8 +15,6 @@
 
 - (void)didRefreshTableViewBalanceLocal:(BOOL)isLocal;
 
-- (void)didShowQRCodeScan;
-
-- (void)didShowAddressControl;
+- (void)didUploadFile;
 
 @end
