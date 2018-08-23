@@ -115,7 +115,10 @@
     [picker dismissViewControllerAnimated:YES completion:nil];
     UIImage *image = info[UIImagePickerControllerOriginalImage];
     NSData *imageData = UIImageJPEGRepresentation(image, 0.1);
-    NSString *imageName = @"image.jpg";
+    NSDateFormatter *dateFormatter = [NSDateFormatter new];
+    dateFormatter.dateFormat = @"yyyyMMddHHmmss";
+    NSDate *currentDate = [NSDate date];
+    NSString *imageName = [NSString stringWithFormat:@"%@.jpg", [dateFormatter stringFromDate:currentDate]];
     MainRequestManager *requestManager = [MainRequestManager new];
     [requestManager uploadFile:imageData name:imageName fileName:imageName mimeType:@"image/jpg" success:^(id responseObject) {
         NSLog(@"Upload success : %@", responseObject);

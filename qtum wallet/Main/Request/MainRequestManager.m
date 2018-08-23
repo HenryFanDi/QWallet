@@ -14,6 +14,8 @@
 @property (strong, nonatomic) MainNetworkingService *networkService;
 @end
 
+static NSString * const kBSXUploadURL = @"http://ipfs.joecwu.com:5001/api/v0/add";
+
 @implementation MainRequestManager
 
 #pragma mark - Lifecycle
@@ -30,7 +32,7 @@
 
 - (void)uploadFile:(NSData *)data name:(NSString *)name fileName:(NSString *)fileName mimeType:(NSString *)mimeType success:(void (^)(id responseObject))success failure:(void (^)(NSError *error))failure {
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    [manager POST:@"http://ipfs.joecwu.com:5001/api/v0/add" parameters:nil constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+    [manager POST:kBSXUploadURL parameters:nil constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
         [formData appendPartWithFileData:data name:name fileName:fileName mimeType:mimeType];
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
         success(responseObject);
