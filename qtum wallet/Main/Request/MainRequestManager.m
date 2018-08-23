@@ -15,6 +15,7 @@
 
 static NSString * const kBSXUploadURL = @"http://ipfs.joecwu.com:5001/api/v0/add";
 static NSString * const kBSXRegisterURL = @"http://ipfs.joecwu.com:6000/register";
+static NSString * const kBSXGetWalletBalanceURL = @"http://ipfs.joecwu.com:6000/balance";
 
 @implementation MainRequestManager
 
@@ -43,6 +44,16 @@ static NSString * const kBSXRegisterURL = @"http://ipfs.joecwu.com:6000/register
     }];
 }
 
-#pragma mark - Balance
+#pragma mark - Get Wallet Balance
+
+- (void)getWalletBalance:(void (^)(id responseObject))success failure:(void (^)(NSError *error))failure {
+    MainNetworkingService *networkService = [[MainNetworkingService alloc] initWithBaseUrl:kBSXGetWalletBalanceURL];
+    NSString *walletAddress = @"qVuqcjpBmRYGjjVZm1q1LFa28KJGQYPepC";
+    [networkService requestWithType:GET path:walletAddress andParams:nil withSuccessHandler:^(id  _Nonnull responseObject) {
+        success(responseObject);
+    } andFailureHandler:^(NSError * _Nonnull error, NSString * _Nullable message) {
+        failure(error);
+    }];
+}
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "MainViewController.h"
+#import "MainRequestManager.h"
 
 @interface MainViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
@@ -25,6 +26,12 @@
     [super viewDidLoad];
     
     [self configTableView];
+    
+    [[MainRequestManager new] getWalletBalance:^(id responseObject) {
+        NSLog(@"Get Wallet Balance success : %@", responseObject);
+    } failure:^(NSError *error) {
+        NSLog(@"Get Wallet Balance failure : %@", [error localizedDescription]);
+    }];
 }
 
 - (void)viewWillAppear:(BOOL)animated {

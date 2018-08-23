@@ -16,4 +16,8 @@
 // Register
 - (void)registerFile:(NSString *)fileHash success:(void (^)(id responseObject))success failure:(void (^)(NSError *error))failure;
 
+// Get Wallet Balance
+
+- (void)getWalletBalance:(void (^)(id responseObject))success failure:(void (^)(NSError *error))failure;
+
 @end
