@@ -11,22 +11,12 @@
 #import "AFNetworking.h"
 
 @interface MainRequestManager ()
-@property (strong, nonatomic) MainNetworkingService *networkService;
 @end
 
 static NSString * const kBSXUploadURL = @"http://ipfs.joecwu.com:5001/api/v0/add";
+static NSString * const kBSXRegisterURL = @"http://ipfs.joecwu.com:6000/register";
 
 @implementation MainRequestManager
-
-#pragma mark - Lifecycle
-
-- (instancetype)initWithBaseUrl:(NSString *)baseUrl {
-    self = [super init];
-    if (self != nil) {
-        _networkService = [[MainNetworkingService alloc] initWithBaseUrl:baseUrl];
-    }
-    return self;
-}
 
 #pragma mark - Upload
 
@@ -37,6 +27,18 @@ static NSString * const kBSXUploadURL = @"http://ipfs.joecwu.com:5001/api/v0/add
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
         success(responseObject);
     } failure:^(NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error) {
+        failure(error);
+    }];
+}
+
+#pragma mark - Register
+
+- (void)registerFile:(NSString *)fileHash success:(void (^)(id responseObject))success failure:(void (^)(NSError *error))failure {
+    MainNetworkingService *networkService = [[MainNetworkingService alloc] initWithBaseUrl:kBSXRegisterURL];
+    networkService.senderAddress = @"qR7LMJGTNTktrhd5AUeyNkGQNAnPzdX5eu";
+    [networkService requestWithType:POST path:fileHash andParams:nil withSuccessHandler:^(id  _Nonnull responseObject) {
+        success(responseObject);
+    } andFailureHandler:^(NSError * _Nonnull error, NSString * _Nullable message) {
         failure(error);
     }];
 }

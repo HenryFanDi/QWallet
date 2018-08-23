@@ -481,6 +481,7 @@
 		D56B020D09B5747897E3EA15 /* libPods-qtum walletTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2601E5D944F526E1947C2A50 /* libPods-qtum walletTests.a */; };
 		D81F36FB2127B3C20029E507 /* MainViewControllerDark.m in Sources */ = {isa = PBXBuildFile; fileRef = D81F36FA2127B3C20029E507 /* MainViewControllerDark.m */; };
 		D81F36FE2127B4050029E507 /* MainViewControllerLight.m in Sources */ = {isa = PBXBuildFile; fileRef = D81F36FD2127B4050029E507 /* MainViewControllerLight.m */; };
+		D85AF38A212F631000AC7EE6 /* FileModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D85AF389212F631000AC7EE6 /* FileModel.m */; };
 		D85E46EF212A28860041F8B2 /* MainTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D85E46EE212A28860041F8B2 /* MainTableViewCell.m */; };
 		D85E46F2212A28D50041F8B2 /* MainTableViewCellDark.m in Sources */ = {isa = PBXBuildFile; fileRef = D85E46F1212A28D50041F8B2 /* MainTableViewCellDark.m */; };
 		D85E46F5212A28E00041F8B2 /* MainTableViewCellLight.m in Sources */ = {isa = PBXBuildFile; fileRef = D85E46F4212A28E00041F8B2 /* MainTableViewCellLight.m */; };
@@ -1814,6 +1815,8 @@
 		D81F36FC2127B4050029E507 /* MainViewControllerLight.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewControllerLight.h; sourceTree = "<group>"; };
 		D81F36FD2127B4050029E507 /* MainViewControllerLight.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewControllerLight.m; sourceTree = "<group>"; };
 		D837D7CF212E217400391FC9 /* MainRequestable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainRequestable.h; sourceTree = "<group>"; };
+		D85AF388212F631000AC7EE6 /* FileModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileModel.h; sourceTree = "<group>"; };
+		D85AF389212F631000AC7EE6 /* FileModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FileModel.m; sourceTree = "<group>"; };
 		D85E46ED212A28860041F8B2 /* MainTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainTableViewCell.h; sourceTree = "<group>"; };
 		D85E46EE212A28860041F8B2 /* MainTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainTableViewCell.m; sourceTree = "<group>"; };
 		D85E46F0212A28D50041F8B2 /* MainTableViewCellDark.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainTableViewCellDark.h; sourceTree = "<group>"; };
@@ -4174,6 +4177,15 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		D85AF387212F62F200AC7EE6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D85AF388212F631000AC7EE6 /* FileModel.h */,
+				D85AF389212F631000AC7EE6 /* FileModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		D85E46EC212A24DB0041F8B2 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -4191,6 +4203,7 @@
 			isa = PBXGroup;
 			children = (
 				D8F576BB2127B626007A6263 /* Request */,
+				D85AF387212F62F200AC7EE6 /* Model */,
 				D8F576BA2127B5EA007A6263 /* View */,
 				D85E46EC212A24DB0041F8B2 /* Cell */,
 			);
@@ -6060,6 +6073,7 @@
 				B366CA221F1D0AC700EF3273 /* NSData+AES256.m in Sources */,
 				B32C3D021E112A7F0094C82C /* SendNavigationCoordinator.m in Sources */,
 				E73357091F3D897700EE0D8B /* QStoreContractElement.m in Sources */,
+				D85AF38A212F631000AC7EE6 /* FileModel.m in Sources */,
 				B315D02F1F9F439E00C7F4E4 /* QTUMDefaultTagCellLight.m in Sources */,
 				E74857931F13BA4100DCF9A6 /* LanguageViewControllerDark.m in Sources */,
 				B3DD275A1E681A7A00BB0635 /* NewsCoordinator.m in Sources */,

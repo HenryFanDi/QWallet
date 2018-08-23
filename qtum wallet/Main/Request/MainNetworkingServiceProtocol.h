@@ -21,5 +21,6 @@
 
 @optional
 @property (nonatomic, readwrite, copy, nullable) NSString *accessToken;
+@property (nonatomic, readwrite, copy, nullable) NSString *senderAddress;
 
 @end

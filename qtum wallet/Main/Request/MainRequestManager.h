@@ -11,6 +11,4 @@
 
 @interface MainRequestManager : NSObject <MainRequestable>
 
-- (instancetype)initWithBaseUrl:(NSString *)baseUrl;
-
 @end

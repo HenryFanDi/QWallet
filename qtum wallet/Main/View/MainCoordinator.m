@@ -12,6 +12,8 @@
 #import "MainTableSource.h"
 #import "MainRequestManager.h"
 
+#import "FileModel.h"
+
 @interface MainCoordinator () <MainOutputDelegate, DetailOutputDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 @property (nonatomic, strong) UINavigationController *navigationController;
 @property (nonatomic, weak) NSObject <MainOutput> *mainViewController;
@@ -120,8 +122,21 @@
     NSDate *currentDate = [NSDate date];
     NSString *imageName = [NSString stringWithFormat:@"%@.jpg", [dateFormatter stringFromDate:currentDate]];
     MainRequestManager *requestManager = [MainRequestManager new];
-    [requestManager uploadFile:imageData name:imageName fileName:imageName mimeType:@"image/jpg" success:^(id responseObject) {
-        NSLog(@"Upload success : %@", responseObject);
+    [requestManager uploadFile:imageData name:imageName fileName:imageName mimeType:@"image/jpg" success:^(NSDictionary * uploadResponseObject) {
+        if ((uploadResponseObject).count == 0) {
+            return;
+        }
+        NSString *fileHash = uploadResponseObject[@"Hash"];
+        if (!fileHash) {
+            return;
+        }
+        [requestManager registerFile:fileHash success:^(NSDictionary * registerResponseObject) {
+            NSLog(@"Register success : %@", registerResponseObject);
+            FileModel *model = [[FileModel alloc] initWithUploadResponseObject:uploadResponseObject registerResponseObject:registerResponseObject];
+            NSLog(@"model : %@", model);
+        } failure:^(NSError *error) {
+            NSLog(@"Register failure : %@", [error localizedDescription]);
+        }];
     } failure:^(NSError *error) {
         NSLog(@"Upload failure : %@", [error localizedDescription]);
     }];

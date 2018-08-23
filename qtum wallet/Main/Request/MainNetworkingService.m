@@ -17,6 +17,7 @@
 @implementation MainNetworkingService
 
 @synthesize accessToken;
+@synthesize senderAddress;
 
 #pragma mark - Lifecycle
 
@@ -39,6 +40,10 @@
         
         if (accessToken) {
             [manager.requestSerializer setValue:[NSString stringWithFormat:@"Bearer %@", accessToken] forHTTPHeaderField:@"Authorization"];
+        }
+        
+        if (senderAddress) {
+            [manager.requestSerializer setValue:senderAddress forHTTPHeaderField:@"Sender-Address"];
         }
         
         [manager.requestSerializer setTimeoutInterval:15];
