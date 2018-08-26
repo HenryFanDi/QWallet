@@ -13,5 +13,6 @@
 @interface DetailViewController : UIViewController <Presentable, DetailOutput>
 
 @property (nonatomic, weak) id <DetailOutputDelegate> delegate;
+@property (nonatomic, strong) DetailViewControllerViewModel *viewModel;
 
 @end

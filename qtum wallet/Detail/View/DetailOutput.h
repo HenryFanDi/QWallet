@@ -8,9 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import "DetailOutputDelegate.h"
+#import "DetailViewControllerViewModel.h"
 
 @protocol DetailOutput <NSObject>
 
 @property (nonatomic, weak) id <DetailOutputDelegate> delegate;
+@property (nonatomic, strong) DetailViewControllerViewModel *viewModel;
 
 @end

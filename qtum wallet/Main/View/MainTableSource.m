@@ -62,7 +62,7 @@ static NSInteger countOfSections = 2;
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     if (indexPath.section) {
-        [self.delegate didSelectFileItem:nil];
+        [self.delegate didSelectFileItem:self.files[indexPath.row]];
     }
 }
 

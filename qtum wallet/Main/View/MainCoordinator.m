@@ -12,6 +12,7 @@
 #import "MainTableSource.h"
 #import "MainRequestManager.h"
 #import "MainViewControllerViewModel.h"
+#import "DetailViewControllerViewModel.h"
 
 #import "FileModel.h"
 #import "FileManager.h"
@@ -65,6 +66,9 @@
 - (void)didSelectFileItem:(id)item {
     NSObject <DetailOutput> *controller = [SLocator.controllersFactory createDetailViewController];
     controller.delegate = self;
+    
+    DetailViewControllerViewModel *viewModel = [[DetailViewControllerViewModel alloc] initWithModel:item];
+    controller.viewModel = viewModel;
     [self.navigationController pushViewController:[controller toPresent] animated:YES];
 }
 

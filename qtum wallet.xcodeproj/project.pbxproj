@@ -491,6 +491,7 @@
 		D86B23CD211A60D300D5C5DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D86B23CB211A60D300D5C5DB /* Main.storyboard */; };
 		D86B23D5211A611700D5C5DB /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D86B23D4211A611700D5C5DB /* MainViewController.m */; };
 		D86B23D8211A61C100D5C5DB /* MainNavigationCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = D86B23D7211A61C100D5C5DB /* MainNavigationCoordinator.m */; };
+		D897385C2132DFBD00455144 /* DetailViewControllerViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D897385B2132DFBD00455144 /* DetailViewControllerViewModel.m */; };
 		D899F8D2212B828B002AFE14 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D899F8D1212B828B002AFE14 /* DetailViewController.m */; };
 		D8BC6CFD212B842D00BDFE01 /* DetailViewControllerDark.m in Sources */ = {isa = PBXBuildFile; fileRef = D8BC6CFC212B842D00BDFE01 /* DetailViewControllerDark.m */; };
 		D8BC6D00212B844100BDFE01 /* DetailViewControllerLight.m in Sources */ = {isa = PBXBuildFile; fileRef = D8BC6CFF212B844100BDFE01 /* DetailViewControllerLight.m */; };
@@ -1841,6 +1842,8 @@
 		D86B23D7211A61C100D5C5DB /* MainNavigationCoordinator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainNavigationCoordinator.m; sourceTree = "<group>"; };
 		D86B23D9211A633B00D5C5DB /* MainOutput.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainOutput.h; sourceTree = "<group>"; };
 		D86B23DC211A635D00D5C5DB /* MainOutputDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainOutputDelegate.h; sourceTree = "<group>"; };
+		D897385A2132DFBD00455144 /* DetailViewControllerViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewControllerViewModel.h; sourceTree = "<group>"; };
+		D897385B2132DFBD00455144 /* DetailViewControllerViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewControllerViewModel.m; sourceTree = "<group>"; };
 		D899F8CA212B81C7002AFE14 /* DetailOutput.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailOutput.h; sourceTree = "<group>"; };
 		D899F8CD212B8203002AFE14 /* DetailOutputDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailOutputDelegate.h; sourceTree = "<group>"; };
 		D899F8D0212B828B002AFE14 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
@@ -4233,9 +4236,19 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
+		D897385D2132E2A800455144 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D897385A2132DFBD00455144 /* DetailViewControllerViewModel.h */,
+				D897385B2132DFBD00455144 /* DetailViewControllerViewModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		D899F8C8212B81A4002AFE14 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				D897385D2132E2A800455144 /* Model */,
 				D899F8C9212B81B2002AFE14 /* View */,
 			);
 			path = Detail;
@@ -6295,6 +6308,7 @@
 				B3CB56AE1ECEE8B300B23AE9 /* BalancePageViewController.m in Sources */,
 				B3827DE71ECF673900E500DE /* TokenFunctionViewController.m in Sources */,
 				B32C3CFF1E112A470094C82C /* NewsNavigationController.m in Sources */,
+				D897385C2132DFBD00455144 /* DetailViewControllerViewModel.m in Sources */,
 				E71F1C7F1F1CA1E400961B19 /* LibraryTableViewCell.m in Sources */,
 				B3E090251FAB4DD1003F3B54 /* QTUMContractLableWithMargins.m in Sources */,
 				B3DC9CFD1F31AE54006B2E07 /* TokenFunctionCellDark.m in Sources */,
