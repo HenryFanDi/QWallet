@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface FileModel : NSObject
+@interface FileModel : NSObject <NSCoding>
 @property (nonatomic, strong, readonly) NSString *fileHash;
 @property (nonatomic, strong, readonly) NSString *name;
 @property (nonatomic, strong, readonly) NSNumber *size;

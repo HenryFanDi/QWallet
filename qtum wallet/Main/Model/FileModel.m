@@ -45,6 +45,32 @@
     return self;
 }
 
+#pragma mark - NSCoding
+
+- (instancetype)initWithCoder:(NSCoder *)aDecoder {
+    self = [super init];
+    if (self) {
+        self.fileHash = [aDecoder decodeObjectForKey:@"fileHash"];
+        self.name = [aDecoder decodeObjectForKey:@"name"];
+        self.size = [aDecoder decodeObjectForKey:@"size"];
+        self.amount = [aDecoder decodeObjectForKey:@"amount"];
+        self.txID = [aDecoder decodeObjectForKey:@"txID"];
+        self.time = [aDecoder decodeObjectForKey:@"time"];
+        self.object = [aDecoder decodeObjectForKey:@"object"];
+    }
+    return self;
+}
+
+- (void)encodeWithCoder:(NSCoder *)coder {
+    [coder encodeObject:self.fileHash forKey:@"fileHash"];
+    [coder encodeObject:self.name forKey:@"name"];
+    [coder encodeObject:self.size forKey:@"size"];
+    [coder encodeObject:self.amount forKey:@"amount"];
+    [coder encodeObject:self.txID forKey:@"txID"];
+    [coder encodeObject:self.time forKey:@"time"];
+    [coder encodeObject:self.object forKey:@"object"];
+}
+
 #pragma mark - Private Methods
 
 - (NSString *)stringFromTimeInterval:(NSTimeInterval)interval {

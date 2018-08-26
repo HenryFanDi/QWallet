@@ -14,6 +14,7 @@
 #import "MainViewControllerViewModel.h"
 
 #import "FileModel.h"
+#import "FileManager.h"
 
 @interface MainCoordinator () <MainOutputDelegate, DetailOutputDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 @property (nonatomic, strong) UINavigationController *navigationController;
@@ -45,6 +46,8 @@
     
     self.delegateDataSource = [SLocator.tableSourcesFactory mainSource];
     self.delegateDataSource.delegate = self;
+    self.delegateDataSource.files = [SLocator.fileManager readFiles];
+    
     controller.tableSource = self.delegateDataSource;
     self.mainViewController = controller;
     
@@ -120,6 +123,7 @@
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
     [picker dismissViewControllerAnimated:YES completion:nil];
     
+    // TODO: To VM
     UIImage *image = info[UIImagePickerControllerOriginalImage];
     NSData *imageData = UIImageJPEGRepresentation(image, 0.1);
     NSDateFormatter *dateFormatter = [NSDateFormatter new];
@@ -127,7 +131,10 @@
     NSDate *currentDate = [NSDate date];
     NSString *imageName = [NSString stringWithFormat:@"%@.jpg", [dateFormatter stringFromDate:currentDate]];
     MainRequestManager *requestManager = [MainRequestManager new];
+    
+    __weak typeof(self) weakSelf = self;
     [requestManager uploadFile:imageData name:imageName fileName:imageName mimeType:@"image/jpg" success:^(NSDictionary * uploadResponseObject) {
+        __strong typeof(weakSelf) self = weakSelf;
         if ((uploadResponseObject).count == 0) {
             return;
         }
@@ -136,9 +143,10 @@
             return;
         }
         [requestManager registerFile:fileHash success:^(NSDictionary * registerResponseObject) {
-            NSLog(@"Register success : %@", registerResponseObject);
-            FileModel *model = [[FileModel alloc] initWithUploadResponseObject:uploadResponseObject registerResponseObject:registerResponseObject object:image];
-            NSLog(@"model : %@", model);
+            FileModel *file = [[FileModel alloc] initWithUploadResponseObject:uploadResponseObject registerResponseObject:registerResponseObject object:image];
+            [SLocator.fileManager addNewFile:file];
+            self.delegateDataSource.files = SLocator.fileManager.files;
+            [self.mainViewController reloadTableView];
         } failure:^(NSError *error) {
             NSLog(@"Register failure : %@", [error localizedDescription]);
         }];

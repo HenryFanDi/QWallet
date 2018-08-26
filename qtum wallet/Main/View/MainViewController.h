@@ -12,7 +12,6 @@
 #import "MainOutput.h"
 
 @class ViewWithAnimatedLine;
-@class MainViewControllerViewModel;
 
 @interface MainViewController : UIViewController <Presentable, MainControllerDelegate, MainOutput>
 

@@ -41,6 +41,7 @@
 		_requestManager = [[RequestManager alloc] initWithBaseUrl:_appSettings.baseURL];
 		_contractInfoFacade = [ContractInfoFacade new];
 		_sourceCodeFormatService = [SourceCodeFormatService new];
+        _fileManager = [FileManager new];
 	}
 	return self;
 }

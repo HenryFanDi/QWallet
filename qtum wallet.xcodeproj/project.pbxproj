@@ -481,6 +481,7 @@
 		D56B020D09B5747897E3EA15 /* libPods-qtum walletTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2601E5D944F526E1947C2A50 /* libPods-qtum walletTests.a */; };
 		D81F36FB2127B3C20029E507 /* MainViewControllerDark.m in Sources */ = {isa = PBXBuildFile; fileRef = D81F36FA2127B3C20029E507 /* MainViewControllerDark.m */; };
 		D81F36FE2127B4050029E507 /* MainViewControllerLight.m in Sources */ = {isa = PBXBuildFile; fileRef = D81F36FD2127B4050029E507 /* MainViewControllerLight.m */; };
+		D8591ECA213279D700111D14 /* FileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D8591EC9213279D700111D14 /* FileManager.m */; };
 		D85AF38A212F631000AC7EE6 /* FileModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D85AF389212F631000AC7EE6 /* FileModel.m */; };
 		D85AF38D212F7B8A00AC7EE6 /* MainViewControllerViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D85AF38C212F7B8A00AC7EE6 /* MainViewControllerViewModel.m */; };
 		D85E46EF212A28860041F8B2 /* MainTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D85E46EE212A28860041F8B2 /* MainTableViewCell.m */; };
@@ -1816,6 +1817,8 @@
 		D81F36FC2127B4050029E507 /* MainViewControllerLight.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewControllerLight.h; sourceTree = "<group>"; };
 		D81F36FD2127B4050029E507 /* MainViewControllerLight.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewControllerLight.m; sourceTree = "<group>"; };
 		D837D7CF212E217400391FC9 /* MainRequestable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainRequestable.h; sourceTree = "<group>"; };
+		D8591EC8213279D700111D14 /* FileManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileManager.h; sourceTree = "<group>"; };
+		D8591EC9213279D700111D14 /* FileManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FileManager.m; sourceTree = "<group>"; };
 		D85AF388212F631000AC7EE6 /* FileModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileModel.h; sourceTree = "<group>"; };
 		D85AF389212F631000AC7EE6 /* FileModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FileModel.m; sourceTree = "<group>"; };
 		D85AF38B212F7B8A00AC7EE6 /* MainViewControllerViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewControllerViewModel.h; sourceTree = "<group>"; };
@@ -4194,6 +4197,8 @@
 		D85AF38E212F7D9A00AC7EE6 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				D8591EC8213279D700111D14 /* FileManager.h */,
+				D8591EC9213279D700111D14 /* FileManager.m */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -6237,6 +6242,7 @@
 				B35DF6391F262B7200316953 /* TokenDetailsViewControllerDark.m in Sources */,
 				B385B5A51E6D829C003BB96C /* WalletTableSource.m in Sources */,
 				B3E8B78B1F4AC5E300DD7904 /* SourceCodePopUpViewControllerDark.m in Sources */,
+				D8591ECA213279D700111D14 /* FileManager.m in Sources */,
 				E7C101C11F15073800848526 /* HistoryItemViewControllerDark.m in Sources */,
 				B3D5FE771F56F399006A2BF2 /* AbiParameterTypeFixedArrayBool.m in Sources */,
 				B33BD5571EBCA6890076B0C1 /* UIImage+Extension.m in Sources */,

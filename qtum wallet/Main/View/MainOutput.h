@@ -8,9 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import "MainOutputDelegate.h"
+#import "MainViewControllerViewModel.h"
 
 @class MainTableSource;
-@class MainViewControllerViewModel;
 
 @protocol MainOutput <NSObject>
 

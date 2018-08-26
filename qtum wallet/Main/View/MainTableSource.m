@@ -36,8 +36,7 @@ static NSInteger countOfSections = 2;
     if (section == 0) {
         return 1;
     } else {
-//        return self.wallet.historyStorage.historyPrivate.count;
-        return 5;
+        return self.files.count;
     }
 }
 

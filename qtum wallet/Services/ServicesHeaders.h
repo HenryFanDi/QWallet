@@ -40,6 +40,6 @@
 #import "WatchTokensFacadeService.h"
 #import "KeychainService.h"
 #import "CallContractFacadeService.h"
-
+#import "FileManager.h"
 
 #endif /* ServicesHeaders_h */

@@ -41,7 +41,7 @@
 @property (strong, nonatomic) WatchTokensFacadeService* watchTokensFacadeService;
 @property (strong, nonatomic) KeychainService* keychainService;
 @property (strong, nonatomic) CallContractFacadeService* callContractFacadeService;
-
+@property (nonatomic, strong) FileManager *fileManager;
 
 + (instancetype)sharedInstance;
 

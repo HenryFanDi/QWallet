@@ -11,19 +11,21 @@
 #import "WalletHeaderCell.h"
 #import "HistoryHeaderVIew.h"
 
+@class FileModel;
+
 @protocol MainControllerDelegate <NSObject>
 @optional
 - (void)needShowHeader:(CGFloat)percent;
 - (void)needHideHeader:(CGFloat)percent;
 - (void)needShowHeaderForSecondSeciton;
 - (void)needHideHeaderForSecondSeciton;
-
 @end
 
 @interface MainTableSource : NSObject <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, weak) id <MainCoordinatorDelegate> delegate;
-@property (weak, nonatomic) id <MainControllerDelegate> controllerDelegate;
+@property (nonatomic, weak) id <MainControllerDelegate> controllerDelegate;
+@property (nonatomic, strong) NSArray <FileModel *> *files;
 
 @property (nonatomic, weak) UITableView *tableView;
 @property (nonatomic, weak) WalletHeaderCell *mainCell;

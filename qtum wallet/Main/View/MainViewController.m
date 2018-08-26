@@ -57,7 +57,7 @@
 #pragma mark - MainOutput
 
 - (void)reloadTableView {
-
+    [self.tableView reloadData];
 }
 
 - (void)failedToGetData {
