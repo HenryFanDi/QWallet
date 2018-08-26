@@ -10,11 +10,13 @@
 #import "MainOutputDelegate.h"
 
 @class MainTableSource;
+@class MainViewControllerViewModel;
 
 @protocol MainOutput <NSObject>
 
 @property (nonatomic, strong) MainTableSource *tableSource;
 @property (nonatomic, weak) id <MainOutputDelegate> delegate;
+@property (nonatomic, strong) MainViewControllerViewModel *viewModel;
 
 - (void)reloadTableView;
 

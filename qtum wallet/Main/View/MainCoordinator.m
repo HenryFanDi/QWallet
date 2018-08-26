@@ -11,6 +11,7 @@
 #import "DetailOutput.h"
 #import "MainTableSource.h"
 #import "MainRequestManager.h"
+#import "MainViewControllerViewModel.h"
 
 #import "FileModel.h"
 
@@ -39,7 +40,10 @@
     NSObject <MainOutput> *controller = [SLocator.controllersFactory createMainViewController];
     controller.delegate = self;
     
-    self.delegateDataSource = [SLocator.tableSourcesFactory mainWalletSource];
+    MainViewControllerViewModel *viewModel = [[MainViewControllerViewModel alloc] init];
+    controller.viewModel = viewModel;
+    
+    self.delegateDataSource = [SLocator.tableSourcesFactory mainSource];
     self.delegateDataSource.delegate = self;
     controller.tableSource = self.delegateDataSource;
     self.mainViewController = controller;
@@ -116,7 +120,6 @@
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
     [picker dismissViewControllerAnimated:YES completion:nil];
     
-    // TODO: To VM
     UIImage *image = info[UIImagePickerControllerOriginalImage];
     NSData *imageData = UIImageJPEGRepresentation(image, 0.1);
     NSDateFormatter *dateFormatter = [NSDateFormatter new];
@@ -134,7 +137,7 @@
         }
         [requestManager registerFile:fileHash success:^(NSDictionary * registerResponseObject) {
             NSLog(@"Register success : %@", registerResponseObject);
-            FileModel *model = [[FileModel alloc] initWithUploadResponseObject:uploadResponseObject registerResponseObject:registerResponseObject];
+            FileModel *model = [[FileModel alloc] initWithUploadResponseObject:uploadResponseObject registerResponseObject:registerResponseObject object:image];
             NSLog(@"model : %@", model);
         } failure:^(NSError *error) {
             NSLog(@"Register failure : %@", [error localizedDescription]);

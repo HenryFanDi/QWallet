@@ -482,6 +482,7 @@
 		D81F36FB2127B3C20029E507 /* MainViewControllerDark.m in Sources */ = {isa = PBXBuildFile; fileRef = D81F36FA2127B3C20029E507 /* MainViewControllerDark.m */; };
 		D81F36FE2127B4050029E507 /* MainViewControllerLight.m in Sources */ = {isa = PBXBuildFile; fileRef = D81F36FD2127B4050029E507 /* MainViewControllerLight.m */; };
 		D85AF38A212F631000AC7EE6 /* FileModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D85AF389212F631000AC7EE6 /* FileModel.m */; };
+		D85AF38D212F7B8A00AC7EE6 /* MainViewControllerViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D85AF38C212F7B8A00AC7EE6 /* MainViewControllerViewModel.m */; };
 		D85E46EF212A28860041F8B2 /* MainTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D85E46EE212A28860041F8B2 /* MainTableViewCell.m */; };
 		D85E46F2212A28D50041F8B2 /* MainTableViewCellDark.m in Sources */ = {isa = PBXBuildFile; fileRef = D85E46F1212A28D50041F8B2 /* MainTableViewCellDark.m */; };
 		D85E46F5212A28E00041F8B2 /* MainTableViewCellLight.m in Sources */ = {isa = PBXBuildFile; fileRef = D85E46F4212A28E00041F8B2 /* MainTableViewCellLight.m */; };
@@ -1817,6 +1818,8 @@
 		D837D7CF212E217400391FC9 /* MainRequestable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainRequestable.h; sourceTree = "<group>"; };
 		D85AF388212F631000AC7EE6 /* FileModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileModel.h; sourceTree = "<group>"; };
 		D85AF389212F631000AC7EE6 /* FileModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FileModel.m; sourceTree = "<group>"; };
+		D85AF38B212F7B8A00AC7EE6 /* MainViewControllerViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewControllerViewModel.h; sourceTree = "<group>"; };
+		D85AF38C212F7B8A00AC7EE6 /* MainViewControllerViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewControllerViewModel.m; sourceTree = "<group>"; };
 		D85E46ED212A28860041F8B2 /* MainTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainTableViewCell.h; sourceTree = "<group>"; };
 		D85E46EE212A28860041F8B2 /* MainTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainTableViewCell.m; sourceTree = "<group>"; };
 		D85E46F0212A28D50041F8B2 /* MainTableViewCellDark.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainTableViewCellDark.h; sourceTree = "<group>"; };
@@ -4182,8 +4185,17 @@
 			children = (
 				D85AF388212F631000AC7EE6 /* FileModel.h */,
 				D85AF389212F631000AC7EE6 /* FileModel.m */,
+				D85AF38B212F7B8A00AC7EE6 /* MainViewControllerViewModel.h */,
+				D85AF38C212F7B8A00AC7EE6 /* MainViewControllerViewModel.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		D85AF38E212F7D9A00AC7EE6 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 		D85E46EC212A24DB0041F8B2 /* Cell */ = {
@@ -4202,6 +4214,7 @@
 		D86B23CE211A60E600D5C5DB /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				D85AF38E212F7D9A00AC7EE6 /* Manager */,
 				D8F576BB2127B626007A6263 /* Request */,
 				D85AF387212F62F200AC7EE6 /* Model */,
 				D8F576BA2127B5EA007A6263 /* View */,
@@ -6294,6 +6307,7 @@
 				B30B11591FC6CE0900E5ABBC /* SendStoryboardFactory.m in Sources */,
 				B35DF6491F27329E00316953 /* TokenDetailTableViewLight.m in Sources */,
 				B36505AA1F16017300521603 /* ExportBrainKeyViewControllerLight.m in Sources */,
+				D85AF38D212F7B8A00AC7EE6 /* MainViewControllerViewModel.m in Sources */,
 				B3EE8F541F13B4DF00131823 /* LoginViewControllerLight.m in Sources */,
 				B3D5FE8F1F57F742006A2BF2 /* AbiParameterTypeDynamicArrayBytes.m in Sources */,
 				B3DC9D071F31B6B7006B2E07 /* AddressControlListViewControllerLight.m in Sources */,

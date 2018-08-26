@@ -23,7 +23,7 @@
 
 - (WalletTableSource *)createWalletSource;
 
-- (MainTableSource *)mainWalletSource;
+- (MainTableSource *)mainSource;
 
 - (NSObject <ChooseTokenPaymentDelegateDataSourceProtocol> *)createSendTokenPaymentSource;
 

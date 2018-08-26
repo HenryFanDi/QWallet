@@ -15,7 +15,8 @@
 @property (nonatomic, strong, readonly) NSNumber *amount;
 @property (nonatomic, strong, readonly) NSString *txID;
 @property (nonatomic, strong, readonly) NSString *time;
+@property (nonatomic, strong, readonly, nullable) id object;
 
-- (instancetype)initWithUploadResponseObject:(NSDictionary *)uploadResponseObject registerResponseObject:(NSDictionary *)registerResponseObject;
+- (instancetype)initWithUploadResponseObject:(NSDictionary *)uploadResponseObject registerResponseObject:(NSDictionary *)registerResponseObject object:(nullable id)object;
 
 @end

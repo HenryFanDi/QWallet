@@ -15,23 +15,21 @@
 @property (weak, nonatomic) IBOutlet UILabel *availableLabel;
 @property (weak, nonatomic) IBOutlet UIView *viewForHeaderInSecondSection;
 @property (weak, nonatomic) IBOutlet UILabel *activityLabel;
-
 @end
 
 @implementation MainViewController
 
 #pragma mark - Lifecycle
 
+- (void)dealloc {
+    NSLog(@"%s", __PRETTY_FUNCTION__);
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     [self configTableView];
     
-    [[MainRequestManager new] getWalletBalance:^(id responseObject) {
-        NSLog(@"Get Wallet Balance success : %@", responseObject);
-    } failure:^(NSError *error) {
-        NSLog(@"Get Wallet Balance failure : %@", [error localizedDescription]);
-    }];
+    [self fetchWalletBalance];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -50,6 +48,10 @@
     self.tableView.delegate = self.tableSource;
     self.tableSource.tableView = self.tableView;
     self.tableSource.controllerDelegate = self;
+}
+
+- (void)fetchWalletBalance {
+    [self.viewModel fetchWalletBalance];
 }
 
 #pragma mark - MainOutput
@@ -94,6 +96,15 @@
 
 - (IBAction)actionButtonDidPress:(id)sender {
     [self.delegate didUploadFile];
+}
+
+#pragma mark - Accessors
+
+- (MainViewControllerViewModel *)viewModel {
+    if (!_viewModel) {
+        _viewModel = [[MainViewControllerViewModel alloc] init];
+    }
+    return _viewModel;
 }
 
 @end

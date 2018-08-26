@@ -15,13 +15,14 @@
 @property (nonatomic, strong, readwrite) NSNumber *amount;
 @property (nonatomic, strong, readwrite) NSString *txID;
 @property (nonatomic, strong, readwrite) NSString *time;
+@property (nonatomic, strong, readwrite, nullable) id object;
 @end
 
 @implementation FileModel
 
 #pragma mark - Lifecycle
 
-- (instancetype)initWithUploadResponseObject:(NSDictionary *)uploadResponseObject registerResponseObject:(NSDictionary *)registerResponseObject {
+- (instancetype)initWithUploadResponseObject:(NSDictionary *)uploadResponseObject registerResponseObject:(NSDictionary *)registerResponseObject object:(nullable id)object {
     self = [super init];
     if (self) {
         self.fileHash = uploadResponseObject[@"Hash"] ? : @"";
@@ -36,6 +37,9 @@
             dateFormatter.dateFormat = @"MMM dd";
             NSDate *date = [NSDate dateWithTimeIntervalSince1970:[registerResponseObject[@"time"] integerValue]];
             self.time = [dateFormatter stringFromDate:date];
+        }
+        if (object) {
+            self.object = object;
         }
     }
     return self;

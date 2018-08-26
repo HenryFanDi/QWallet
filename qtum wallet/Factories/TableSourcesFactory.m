@@ -35,7 +35,7 @@
 	}
 }
 
-- (MainTableSource *)mainWalletSource {
+- (MainTableSource *)mainSource {
     if ([NSUserDefaults isDarkSchemeSetting]) {
         return [MainTableSourceDark new];
     } else {
