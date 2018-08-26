@@ -21,6 +21,16 @@
     [super setSelected:selected animated:animated];
 }
 
+#pragma mark - Public Methods
+
+- (void)configure:(MainTableViewCellViewModel *)viewModel {
+    self.fileImageView.image = viewModel.fileImage;
+    self.fileNameLabel.text = viewModel.fileNameLabelString;
+    self.timeLabel.text = viewModel.timeLabelString;
+    self.tokenLabel.text = viewModel.tokenLabelString;
+    self.txLabel.text = viewModel.txLabelString;
+}
+
 #pragma mark - Private Methods
 
 - (void)setup {

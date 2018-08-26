@@ -24,7 +24,7 @@
 
 - (void)addNewFile:(FileModel *)file {
     NSMutableArray <FileModel *> *newFiles = [NSMutableArray arrayWithArray:self.files];
-    [newFiles addObject:file];
+    [newFiles insertObject:file atIndex:0];
     self.files = [newFiles copy];
     
     [self writeFiles];

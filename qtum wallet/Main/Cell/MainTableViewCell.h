@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MainTableViewCellViewModel.h"
 
 @interface MainTableViewCell : UITableViewCell
 
@@ -15,5 +16,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *tokenLabel;
 @property (weak, nonatomic) IBOutlet UILabel *txLabel;
+
+- (void)configure:(MainTableViewCellViewModel *)viewModel;
 
 @end

@@ -28,7 +28,7 @@
         self.fileHash = uploadResponseObject[@"Hash"] ? : @"";
         self.name = uploadResponseObject[@"Name"] ? : @"";
         self.size = uploadResponseObject[@"Size"] ? [NSNumber numberWithInteger:[uploadResponseObject[@"Size"] integerValue]] : @(0);
-        self.amount = registerResponseObject[@"amount"] ? [NSNumber numberWithInteger:[uploadResponseObject[@"amount"] integerValue]] : @(0);
+        self.amount = registerResponseObject[@"amount"] ? [NSNumber numberWithInteger:[uploadResponseObject[@"amount"] floatValue]] : @(0.0);
         self.txID = registerResponseObject[@"txid"] ? : @"";
         
         self.time = @"";

@@ -482,6 +482,7 @@
 		D81F36FB2127B3C20029E507 /* MainViewControllerDark.m in Sources */ = {isa = PBXBuildFile; fileRef = D81F36FA2127B3C20029E507 /* MainViewControllerDark.m */; };
 		D81F36FE2127B4050029E507 /* MainViewControllerLight.m in Sources */ = {isa = PBXBuildFile; fileRef = D81F36FD2127B4050029E507 /* MainViewControllerLight.m */; };
 		D8591ECA213279D700111D14 /* FileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D8591EC9213279D700111D14 /* FileManager.m */; };
+		D8591ECD21329BCB00111D14 /* MainTableViewCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D8591ECC21329BCB00111D14 /* MainTableViewCellViewModel.m */; };
 		D85AF38A212F631000AC7EE6 /* FileModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D85AF389212F631000AC7EE6 /* FileModel.m */; };
 		D85AF38D212F7B8A00AC7EE6 /* MainViewControllerViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D85AF38C212F7B8A00AC7EE6 /* MainViewControllerViewModel.m */; };
 		D85E46EF212A28860041F8B2 /* MainTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D85E46EE212A28860041F8B2 /* MainTableViewCell.m */; };
@@ -1819,6 +1820,8 @@
 		D837D7CF212E217400391FC9 /* MainRequestable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainRequestable.h; sourceTree = "<group>"; };
 		D8591EC8213279D700111D14 /* FileManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileManager.h; sourceTree = "<group>"; };
 		D8591EC9213279D700111D14 /* FileManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FileManager.m; sourceTree = "<group>"; };
+		D8591ECB21329BCB00111D14 /* MainTableViewCellViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainTableViewCellViewModel.h; sourceTree = "<group>"; };
+		D8591ECC21329BCB00111D14 /* MainTableViewCellViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainTableViewCellViewModel.m; sourceTree = "<group>"; };
 		D85AF388212F631000AC7EE6 /* FileModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileModel.h; sourceTree = "<group>"; };
 		D85AF389212F631000AC7EE6 /* FileModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FileModel.m; sourceTree = "<group>"; };
 		D85AF38B212F7B8A00AC7EE6 /* MainViewControllerViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewControllerViewModel.h; sourceTree = "<group>"; };
@@ -4190,6 +4193,8 @@
 				D85AF389212F631000AC7EE6 /* FileModel.m */,
 				D85AF38B212F7B8A00AC7EE6 /* MainViewControllerViewModel.h */,
 				D85AF38C212F7B8A00AC7EE6 /* MainViewControllerViewModel.m */,
+				D8591ECB21329BCB00111D14 /* MainTableViewCellViewModel.h */,
+				D8591ECC21329BCB00111D14 /* MainTableViewCellViewModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -5979,6 +5984,7 @@
 				B32BC4A81F28B49C00C2417C /* ChangePinCoordinator.m in Sources */,
 				B3CBDF411F2B496A00C80D4E /* TokenTemplateCellDark.m in Sources */,
 				B34253FF1E164B4C00288CF6 /* CreatePinViewController.m in Sources */,
+				D8591ECD21329BCB00111D14 /* MainTableViewCellViewModel.m in Sources */,
 				B31441161FB49A8C004FE08C /* QTUMTitleTagCellLight.m in Sources */,
 				B381CBE21F02872000142252 /* EnableFingerprintViewController.m in Sources */,
 				B3EA531E1F473843002FD201 /* QStoreListTableSourceLight.m in Sources */,

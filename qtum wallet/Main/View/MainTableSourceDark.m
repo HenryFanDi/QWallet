@@ -44,6 +44,8 @@
         return cell;
     } else {
         MainTableViewCellDark *cell = [tableView dequeueReusableCellWithIdentifier:@"MainTableViewCellDark"];
+        MainTableViewCellViewModel *viewModel = [[MainTableViewCellViewModel alloc] initWithModel:self.files[indexPath.row]];
+        [cell configure:viewModel];
         return cell;
     }
 }
