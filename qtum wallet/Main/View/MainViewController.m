@@ -51,11 +51,16 @@
 }
 
 - (void)fetchWalletBalance {
+    [SLocator.popupService showLoaderPopUp];
+    
     __weak typeof(self) weakSelf = self;
     [self.viewModel fetchWalletBalance:^(NSString *wallet, NSString *balance) {
+        [SLocator.popupService dismissLoader];
+        
         __strong typeof(weakSelf) self = weakSelf;
         self.tableSource.mainCell.valueLabel.text = balance;
     } failure:^{
+        [SLocator.popupService dismissLoader];
     }];
 }
 

@@ -34,7 +34,7 @@
         self.time = @"";
         if (registerResponseObject[@"time"]) {
             NSDateFormatter *dateFormatter = [NSDateFormatter new];
-            dateFormatter.dateFormat = @"MMM dd";
+            dateFormatter.dateFormat = @"MMM dd HH:MM";
             NSDate *date = [NSDate dateWithTimeIntervalSince1970:[registerResponseObject[@"time"] integerValue]];
             self.time = [dateFormatter stringFromDate:date];
         }

@@ -134,8 +134,10 @@
     dateFormatter.dateFormat = @"yyyyMMddHHmmss";
     NSDate *currentDate = [NSDate date];
     NSString *imageName = [NSString stringWithFormat:@"%@.jpg", [dateFormatter stringFromDate:currentDate]];
-    MainRequestManager *requestManager = [MainRequestManager new];
     
+    [SLocator.popupService showLoaderPopUp];
+    
+    MainRequestManager *requestManager = [MainRequestManager new];
     __weak typeof(self) weakSelf = self;
     [requestManager uploadFile:imageData name:imageName fileName:imageName mimeType:@"image/jpg" success:^(NSDictionary * uploadResponseObject) {
         __strong typeof(weakSelf) self = weakSelf;
@@ -147,14 +149,17 @@
             return;
         }
         [requestManager registerFile:fileHash success:^(NSDictionary * registerResponseObject) {
+            [SLocator.popupService dismissLoader];
             FileModel *file = [[FileModel alloc] initWithUploadResponseObject:uploadResponseObject registerResponseObject:registerResponseObject object:image];
             [SLocator.fileManager addNewFile:file];
             self.delegateDataSource.files = SLocator.fileManager.files;
             [self.mainViewController reloadTableView];
         } failure:^(NSError *error) {
+            [SLocator.popupService dismissLoader];
             NSLog(@"Register failure : %@", [error localizedDescription]);
         }];
     } failure:^(NSError *error) {
+        [SLocator.popupService dismissLoader];
         NSLog(@"Upload failure : %@", [error localizedDescription]);
     }];
 }
