@@ -51,7 +51,12 @@
 }
 
 - (void)fetchWalletBalance {
-    [self.viewModel fetchWalletBalance];
+    __weak typeof(self) weakSelf = self;
+    [self.viewModel fetchWalletBalance:^(NSString *wallet, NSString *balance) {
+        __strong typeof(weakSelf) self = weakSelf;
+        self.tableSource.mainCell.valueLabel.text = balance;
+    } failure:^{
+    }];
 }
 
 #pragma mark - MainOutput

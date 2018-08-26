@@ -24,7 +24,7 @@
         self.fileImage = model.object;
         self.fileNameLabelString = model.name;
         self.timeLabelString = model.time;
-        self.tokenLabelString = [NSString stringWithFormat:@"+ %.2f", model.amount.floatValue];
+        self.tokenLabelString = [NSString stringWithFormat:@"+%.2f", model.amount.floatValue];
         self.txLabelString = [NSString stringWithFormat:@"Tx:%@", model.txID];
     }
     return self;

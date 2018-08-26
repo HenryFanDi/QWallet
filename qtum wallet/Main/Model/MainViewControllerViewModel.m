@@ -26,11 +26,15 @@
 
 #pragma mark - Public Methods
 
-- (void)fetchWalletBalance {
+- (void)fetchWalletBalance:(void (^)(NSString *wallet, NSString *balance))success failure:(void (^)(void))failure {
     [[MainRequestManager new] getWalletBalance:^(id responseObject) {
         NSLog(@"Get Wallet Balance success : %@", responseObject);
+        NSString *wallet = responseObject[@"wallet"];
+        NSString *balance = [NSString stringWithFormat:@"%.2f BSX", [responseObject[@"balance"] floatValue]];
+        success(wallet, balance);
     } failure:^(NSError *error) {
         NSLog(@"Get Wallet Balance failure : %@", [error localizedDescription]);
+        failure();
     }];
 }
 
