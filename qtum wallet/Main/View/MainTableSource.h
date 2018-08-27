@@ -10,8 +10,7 @@
 #import "MainCoordinator.h"
 #import "WalletHeaderCell.h"
 #import "HistoryHeaderVIew.h"
-
-@class FileModel;
+#import "FileModel.h"
 
 @protocol MainControllerDelegate <NSObject>
 @optional

@@ -34,12 +34,16 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) {
         WalletHeaderCellDark *cell = [tableView dequeueReusableCellWithIdentifier:@"WalletHeaderCellDark"];
-        
-//        cell.delegate = self.delegate;
         [cell setCellType:[self headerCellType]];
-//        [cell setData:self.wallet];
         [self didScrollForheaderCell:tableView];
         
+        NSArray <FileModel *> *files = self.files;
+        CGFloat totalValue = 0.0f;
+        for (FileModel *file in files) {
+            totalValue += file.balance.floatValue;
+        }
+        
+        cell.valueLabel.text = [NSString stringWithFormat:@"%.2f BSX", totalValue];
         self.mainCell = cell;
         return cell;
     } else {
