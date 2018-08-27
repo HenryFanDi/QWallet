@@ -24,7 +24,7 @@
     if (self) {
         self.titleLabelString = model.name;
         self.fileImage = model.object;
-        self.tokenLabelString = [NSString stringWithFormat:@"%+.2f BSX", model.amount.floatValue];
+        self.tokenLabelString = [NSString stringWithFormat:@"%+.2f BSX", model.balance.floatValue];
         self.txLabelString = [NSString stringWithFormat:@"%@", model.txID];
     }
     return self;

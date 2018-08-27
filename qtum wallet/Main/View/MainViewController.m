@@ -28,8 +28,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self configTableView];
-    
-    [self fetchWalletBalance];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -48,20 +46,6 @@
     self.tableView.delegate = self.tableSource;
     self.tableSource.tableView = self.tableView;
     self.tableSource.controllerDelegate = self;
-}
-
-- (void)fetchWalletBalance {
-    [SLocator.popupService showLoaderPopUp];
-    
-    __weak typeof(self) weakSelf = self;
-    [self.viewModel fetchWalletBalance:^(NSString *wallet, NSString *balance) {
-        [SLocator.popupService dismissLoader];
-        
-        __strong typeof(weakSelf) self = weakSelf;
-        self.tableSource.mainCell.valueLabel.text = balance;
-    } failure:^{
-        [SLocator.popupService dismissLoader];
-    }];
 }
 
 #pragma mark - MainOutput

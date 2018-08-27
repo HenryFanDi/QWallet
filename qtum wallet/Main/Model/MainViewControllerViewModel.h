@@ -10,6 +10,4 @@
 
 @interface MainViewControllerViewModel : NSObject
 
-- (void)fetchWalletBalance:(void (^)(NSString *wallet, NSString *balance))success failure:(void (^)(void))failure;
-
 @end

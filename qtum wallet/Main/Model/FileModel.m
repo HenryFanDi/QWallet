@@ -12,23 +12,26 @@
 @property (nonatomic, strong, readwrite) NSString *fileHash;
 @property (nonatomic, strong, readwrite) NSString *name;
 @property (nonatomic, strong, readwrite) NSNumber *size;
-@property (nonatomic, strong, readwrite) NSNumber *amount;
 @property (nonatomic, strong, readwrite) NSString *txID;
 @property (nonatomic, strong, readwrite) NSString *time;
 @property (nonatomic, strong, readwrite, nullable) id object;
+@property (nonatomic, strong, readwrite) NSString *wallet;
+@property (nonatomic, strong, readwrite) NSNumber *balance;
 @end
 
 @implementation FileModel
 
 #pragma mark - Lifecycle
 
-- (instancetype)initWithUploadResponseObject:(NSDictionary *)uploadResponseObject registerResponseObject:(NSDictionary *)registerResponseObject object:(nullable id)object {
+- (instancetype)initWithUploadResponseObject:(NSDictionary *)uploadResponseObject
+                      registerResponseObject:(NSDictionary *)registerResponseObject
+                 walletBalanceResponseObject:(NSDictionary *)walletBalanceResponseObject
+                                      object:(nullable id)object {
     self = [super init];
     if (self) {
         self.fileHash = uploadResponseObject[@"Hash"] ? : @"";
         self.name = uploadResponseObject[@"Name"] ? : @"";
         self.size = uploadResponseObject[@"Size"] ? [NSNumber numberWithInteger:[uploadResponseObject[@"Size"] integerValue]] : @(0);
-        self.amount = registerResponseObject[@"amount"] ? [NSNumber numberWithInteger:[uploadResponseObject[@"amount"] floatValue]] : @(0.0);
         self.txID = registerResponseObject[@"txid"] ? : @"";
         
         self.time = @"";
@@ -41,6 +44,8 @@
         if (object) {
             self.object = object;
         }
+        self.wallet = walletBalanceResponseObject[@"wallet"] ? : @"";
+        self.balance = walletBalanceResponseObject[@"balance"] ? [NSNumber numberWithInteger:[walletBalanceResponseObject[@"balance"] floatValue]] : @(0.0);
     }
     return self;
 }
@@ -53,10 +58,11 @@
         self.fileHash = [aDecoder decodeObjectForKey:@"fileHash"];
         self.name = [aDecoder decodeObjectForKey:@"name"];
         self.size = [aDecoder decodeObjectForKey:@"size"];
-        self.amount = [aDecoder decodeObjectForKey:@"amount"];
         self.txID = [aDecoder decodeObjectForKey:@"txID"];
         self.time = [aDecoder decodeObjectForKey:@"time"];
         self.object = [aDecoder decodeObjectForKey:@"object"];
+        self.wallet = [aDecoder decodeObjectForKey:@"wallet"];
+        self.balance = [aDecoder decodeObjectForKey:@"balance"];
     }
     return self;
 }
@@ -65,10 +71,11 @@
     [coder encodeObject:self.fileHash forKey:@"fileHash"];
     [coder encodeObject:self.name forKey:@"name"];
     [coder encodeObject:self.size forKey:@"size"];
-    [coder encodeObject:self.amount forKey:@"amount"];
     [coder encodeObject:self.txID forKey:@"txID"];
     [coder encodeObject:self.time forKey:@"time"];
     [coder encodeObject:self.object forKey:@"object"];
+    [coder encodeObject:self.wallet forKey:@"wallet"];
+    [coder encodeObject:self.balance forKey:@"balance"];
 }
 
 #pragma mark - Private Methods
