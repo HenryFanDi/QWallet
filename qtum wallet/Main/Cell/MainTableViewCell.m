@@ -25,6 +25,7 @@
 
 - (void)configure:(MainTableViewCellViewModel *)viewModel {
     self.fileImageView.image = viewModel.fileImage;
+    self.sizeLabel.text = viewModel.sizeLabelString;
     self.fileNameLabel.text = viewModel.fileNameLabelString;
     self.timeLabel.text = viewModel.timeLabelString;
     self.tokenLabel.text = viewModel.tokenLabelString;

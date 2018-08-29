@@ -11,6 +11,7 @@
 
 @interface MainTableViewCellViewModel : NSObject
 @property (nonatomic, strong, readonly) UIImage *fileImage;
+@property (nonatomic, strong, readonly) NSString *sizeLabelString;
 @property (nonatomic, strong, readonly) NSString *fileNameLabelString;
 @property (nonatomic, strong, readonly) NSString *timeLabelString;
 @property (nonatomic, strong, readonly) NSString *tokenLabelString;

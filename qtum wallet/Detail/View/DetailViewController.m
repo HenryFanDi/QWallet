@@ -12,6 +12,7 @@
 @interface DetailViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *fileImageView;
+@property (weak, nonatomic) IBOutlet UILabel *sizeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *tokenLabel;
 @property (weak, nonatomic) IBOutlet UILabel *txLabel;
 @end
@@ -51,6 +52,7 @@
 - (void)bindViewModel {
     self.titleLabel.text = self.viewModel.titleLabelString;
     self.fileImageView.image = self.viewModel.fileImage;
+    self.sizeLabel.text = self.viewModel.sizeLabelString;
     self.tokenLabel.text = self.viewModel.tokenLabelString;
     self.txLabel.text = self.viewModel.txLabelString;
 }

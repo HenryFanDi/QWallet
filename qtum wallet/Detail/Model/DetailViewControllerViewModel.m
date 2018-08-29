@@ -12,6 +12,7 @@
 @property (nonatomic, strong, readwrite) FileModel *model;
 @property (nonatomic, strong, readwrite) NSString *titleLabelString;
 @property (nonatomic, strong, readwrite) UIImage *fileImage;
+@property (nonatomic, strong, readwrite) NSString *sizeLabelString;
 @property (nonatomic, strong, readwrite) NSString *tokenLabelString;
 @property (nonatomic, strong, readwrite) NSString *txLabelString;
 @end
@@ -26,6 +27,7 @@
         self.model = model;
         self.titleLabelString = model.name;
         self.fileImage = model.object;
+        self.sizeLabelString = [NSString stringWithFormat:@"%.2f KB", model.size.floatValue / 1000];
         self.tokenLabelString = [NSString stringWithFormat:@"%+.2f BSX", model.balance.floatValue];
         self.txLabelString = [NSString stringWithFormat:@"%@", model.txID];
     }
