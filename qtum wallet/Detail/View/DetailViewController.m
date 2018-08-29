@@ -7,6 +7,7 @@
 //
 
 #import "DetailViewController.h"
+#import "DetailWebViewController.h"
 
 @interface DetailViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
@@ -37,7 +38,7 @@
 #pragma mark - Private Methods
 
 - (void)setupLayout {
-    UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(imageViewDidTap)];
+    UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(fileViewDidTap)];
     tapGestureRecognizer.numberOfTapsRequired = 1;
     self.fileImageView.userInteractionEnabled = YES;
     [self.fileImageView addGestureRecognizer:tapGestureRecognizer];
@@ -56,7 +57,11 @@
 
 #pragma mark - UITapGestureRecognizer
 
-- (void)imageViewDidTap {
+- (void)fileViewDidTap {
+    NSObject <DetailWebOutput> *controller = [SLocator.controllersFactory createDetailWebViewController];
+    ((DetailWebViewController *)controller).type = DetailTypeFile;
+    ((DetailWebViewController *)controller).model = self.viewModel.model;
+    [self.navigationController pushViewController:[controller toPresent] animated:YES];
 }
 
 #pragma mark - IBAction
@@ -66,6 +71,10 @@
 }
 
 - (IBAction)txWebButtonDidPress:(id)sender {
+    NSObject <DetailWebOutput> *controller = [SLocator.controllersFactory createDetailWebViewController];
+    ((DetailWebViewController *)controller).type = DetailTypeTxID;
+    ((DetailWebViewController *)controller).model = self.viewModel.model;
+    [self.navigationController pushViewController:[controller toPresent] animated:YES];
 }
 
 @end

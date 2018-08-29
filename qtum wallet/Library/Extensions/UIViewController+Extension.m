@@ -80,7 +80,8 @@
         [identifire isEqualToString:@"NewsDetailViewController"] ||
         [identifire isEqualToString:@"ConfirmPassphraseViewController"] ||
         [identifire isEqualToString:@"MainViewController"] ||
-        [identifire isEqualToString:@"DetailViewController"]) {
+        [identifire isEqualToString:@"DetailViewController"] ||
+        [identifire isEqualToString:@"DetailWebViewController"]) {
 		if ([NSUserDefaults isDarkSchemeSetting]) {
 			[mutString appendString:@"Dark"];
 		} else {

@@ -10,6 +10,7 @@
 #import "FileModel.h"
 
 @interface DetailViewControllerViewModel : NSObject
+@property (nonatomic, strong, readonly) FileModel *model;
 @property (nonatomic, strong, readonly) NSString *titleLabelString;
 @property (nonatomic, strong, readonly) UIImage *fileImage;
 @property (nonatomic, strong, readonly) NSString *tokenLabelString;

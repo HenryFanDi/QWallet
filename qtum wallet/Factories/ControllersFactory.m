@@ -54,6 +54,7 @@
 
 #import "MainOutput.h"
 #import "DetailOutput.h"
+#import "DetailWebOutput.h"
 #import "NewPaymentOutput.h"
 #import "WalletOutput.h"
 #import "BalancePageOutput.h"
@@ -127,6 +128,11 @@
 
 - (NSObject <DetailOutput> *)createDetailViewController {
     NSObject <DetailOutput> *controller = (NSObject <DetailOutput> *)[UIViewController controllerInStoryboard:@"Main" withIdentifire:@"DetailViewController"];
+    return controller;
+}
+
+- (NSObject <DetailWebOutput> *)createDetailWebViewController {
+    NSObject <DetailWebOutput> *controller = (NSObject <DetailWebOutput> *)[UIViewController controllerInStoryboard:@"Main" withIdentifire:@"DetailWebViewController"];
     return controller;
 }
 

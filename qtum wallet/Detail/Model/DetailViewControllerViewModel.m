@@ -9,6 +9,7 @@
 #import "DetailViewControllerViewModel.h"
 
 @interface DetailViewControllerViewModel ()
+@property (nonatomic, strong, readwrite) FileModel *model;
 @property (nonatomic, strong, readwrite) NSString *titleLabelString;
 @property (nonatomic, strong, readwrite) UIImage *fileImage;
 @property (nonatomic, strong, readwrite) NSString *tokenLabelString;
@@ -22,6 +23,7 @@
 - (instancetype)initWithModel:(FileModel *)model {
     self = [super init];
     if (self) {
+        self.model = model;
         self.titleLabelString = model.name;
         self.fileImage = model.object;
         self.tokenLabelString = [NSString stringWithFormat:@"%+.2f BSX", model.balance.floatValue];

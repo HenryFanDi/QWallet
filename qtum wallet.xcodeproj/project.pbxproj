@@ -481,6 +481,8 @@
 		D56B020D09B5747897E3EA15 /* libPods-qtum walletTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2601E5D944F526E1947C2A50 /* libPods-qtum walletTests.a */; };
 		D81F36FB2127B3C20029E507 /* MainViewControllerDark.m in Sources */ = {isa = PBXBuildFile; fileRef = D81F36FA2127B3C20029E507 /* MainViewControllerDark.m */; };
 		D81F36FE2127B4050029E507 /* MainViewControllerLight.m in Sources */ = {isa = PBXBuildFile; fileRef = D81F36FD2127B4050029E507 /* MainViewControllerLight.m */; };
+		D82042412137342400FFF7FE /* DetailWebViewControllerDark.m in Sources */ = {isa = PBXBuildFile; fileRef = D82042402137342400FFF7FE /* DetailWebViewControllerDark.m */; };
+		D82042442137343B00FFF7FE /* DetailWebViewControllerLight.m in Sources */ = {isa = PBXBuildFile; fileRef = D82042432137343B00FFF7FE /* DetailWebViewControllerLight.m */; };
 		D8591ECA213279D700111D14 /* FileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D8591EC9213279D700111D14 /* FileManager.m */; };
 		D8591ECD21329BCB00111D14 /* MainTableViewCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D8591ECC21329BCB00111D14 /* MainTableViewCellViewModel.m */; };
 		D85AF38A212F631000AC7EE6 /* FileModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D85AF389212F631000AC7EE6 /* FileModel.m */; };
@@ -495,6 +497,8 @@
 		D899F8D2212B828B002AFE14 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D899F8D1212B828B002AFE14 /* DetailViewController.m */; };
 		D8BC6CFD212B842D00BDFE01 /* DetailViewControllerDark.m in Sources */ = {isa = PBXBuildFile; fileRef = D8BC6CFC212B842D00BDFE01 /* DetailViewControllerDark.m */; };
 		D8BC6D00212B844100BDFE01 /* DetailViewControllerLight.m in Sources */ = {isa = PBXBuildFile; fileRef = D8BC6CFF212B844100BDFE01 /* DetailViewControllerLight.m */; };
+		D8EDB03D2134BF41000A50A5 /* DetailWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8EDB03C2134BF41000A50A5 /* DetailWebViewController.m */; };
+		D8EDB03F2134C0AC000A50A5 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8EDB03E2134C0AC000A50A5 /* WebKit.framework */; };
 		D8F576BE2127B648007A6263 /* MainRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F576BD2127B648007A6263 /* MainRequestManager.m */; };
 		D8F576C12127B76B007A6263 /* MainNetworkingService.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F576C02127B76B007A6263 /* MainNetworkingService.m */; };
 		D8F576C521285177007A6263 /* MainTableSource.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F576C421285177007A6263 /* MainTableSource.m */; };
@@ -1818,6 +1822,11 @@
 		D81F36FA2127B3C20029E507 /* MainViewControllerDark.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewControllerDark.m; sourceTree = "<group>"; };
 		D81F36FC2127B4050029E507 /* MainViewControllerLight.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewControllerLight.h; sourceTree = "<group>"; };
 		D81F36FD2127B4050029E507 /* MainViewControllerLight.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewControllerLight.m; sourceTree = "<group>"; };
+		D820423F2137342400FFF7FE /* DetailWebViewControllerDark.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailWebViewControllerDark.h; sourceTree = "<group>"; };
+		D82042402137342400FFF7FE /* DetailWebViewControllerDark.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailWebViewControllerDark.m; sourceTree = "<group>"; };
+		D82042422137343B00FFF7FE /* DetailWebViewControllerLight.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailWebViewControllerLight.h; sourceTree = "<group>"; };
+		D82042432137343B00FFF7FE /* DetailWebViewControllerLight.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailWebViewControllerLight.m; sourceTree = "<group>"; };
+		D82042452137366700FFF7FE /* DetailWebOutput.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailWebOutput.h; sourceTree = "<group>"; };
 		D837D7CF212E217400391FC9 /* MainRequestable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainRequestable.h; sourceTree = "<group>"; };
 		D8591EC8213279D700111D14 /* FileManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileManager.h; sourceTree = "<group>"; };
 		D8591EC9213279D700111D14 /* FileManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FileManager.m; sourceTree = "<group>"; };
@@ -1852,6 +1861,9 @@
 		D8BC6CFC212B842D00BDFE01 /* DetailViewControllerDark.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewControllerDark.m; sourceTree = "<group>"; };
 		D8BC6CFE212B844100BDFE01 /* DetailViewControllerLight.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewControllerLight.h; sourceTree = "<group>"; };
 		D8BC6CFF212B844100BDFE01 /* DetailViewControllerLight.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewControllerLight.m; sourceTree = "<group>"; };
+		D8EDB03B2134BF41000A50A5 /* DetailWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailWebViewController.h; sourceTree = "<group>"; };
+		D8EDB03C2134BF41000A50A5 /* DetailWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailWebViewController.m; sourceTree = "<group>"; };
+		D8EDB03E2134C0AC000A50A5 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		D8F576BC2127B648007A6263 /* MainRequestManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainRequestManager.h; sourceTree = "<group>"; };
 		D8F576BD2127B648007A6263 /* MainRequestManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainRequestManager.m; sourceTree = "<group>"; };
 		D8F576BF2127B76A007A6263 /* MainNetworkingService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainNetworkingService.h; sourceTree = "<group>"; };
@@ -2276,6 +2288,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8EDB03F2134C0AC000A50A5 /* WebKit.framework in Frameworks */,
 				B35733341F97B3A700C64AAE /* libxml2.tbd in Frameworks */,
 				B3FD74C91FE9456C00B1E1EA /* libxml2.dylib in Frameworks */,
 				E7FD365C1DC7360400748177 /* Security.framework in Frameworks */,
@@ -4265,6 +4278,13 @@
 				D8BC6CFC212B842D00BDFE01 /* DetailViewControllerDark.m */,
 				D8BC6CFE212B844100BDFE01 /* DetailViewControllerLight.h */,
 				D8BC6CFF212B844100BDFE01 /* DetailViewControllerLight.m */,
+				D82042452137366700FFF7FE /* DetailWebOutput.h */,
+				D8EDB03B2134BF41000A50A5 /* DetailWebViewController.h */,
+				D8EDB03C2134BF41000A50A5 /* DetailWebViewController.m */,
+				D820423F2137342400FFF7FE /* DetailWebViewControllerDark.h */,
+				D82042402137342400FFF7FE /* DetailWebViewControllerDark.m */,
+				D82042422137343B00FFF7FE /* DetailWebViewControllerLight.h */,
+				D82042432137343B00FFF7FE /* DetailWebViewControllerLight.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -5437,6 +5457,7 @@
 		F94C279886F936AB7B4DA6F8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D8EDB03E2134C0AC000A50A5 /* WebKit.framework */,
 				B3FD74C81FE9456C00B1E1EA /* libxml2.dylib */,
 				B35733331F97B3A700C64AAE /* libxml2.tbd */,
 				B3C4553D1E89596A00420D7C /* SocketIO.framework */,
@@ -6208,6 +6229,7 @@
 				B3C1363B1FFD047300AC3EB1 /* ConfirmWordCollectionViewCell.m in Sources */,
 				E784F8C51F023C4F00A513BF /* QStoreTableSource.m in Sources */,
 				B3C8FAF71F98A247000168AB /* QTUMNewsItem.m in Sources */,
+				D82042412137342400FFF7FE /* DetailWebViewControllerDark.m in Sources */,
 				E713A47E1EEE98E900A2FA40 /* CheckboxButton.m in Sources */,
 				B3427FCD1F54095400182E95 /* AboutOutputViewControllerDark.m in Sources */,
 				B32B32D91ECCC2AC0081260A /* AbiinterfaceItem.m in Sources */,
@@ -6224,6 +6246,7 @@
 				E73CF6D41EE2E1230044DF78 /* PopUpContentGenerator.m in Sources */,
 				B3827DD91ECF28EE00E500DE /* TokenCell.m in Sources */,
 				B369DF2F1F5D5F0E008B81CB /* AbiParameterTypeFixedArrayAddress.m in Sources */,
+				D8EDB03D2134BF41000A50A5 /* DetailWebViewController.m in Sources */,
 				B35733271F97A69A00C64AAE /* ServiceLocator.m in Sources */,
 				B39220561F98E72A00E8F7D9 /* NewsDetailCellBuilder.m in Sources */,
 				E7C101BB1F14B5DB00848526 /* InnerShadowView.m in Sources */,
@@ -6445,6 +6468,7 @@
 				B3EE93721F04E19100550C60 /* SecurityCoordinator.m in Sources */,
 				B3EE8F281F0E109300131823 /* TabBarControllerLight.m in Sources */,
 				B33601861E963EC800243A21 /* HistoryItemViewController.m in Sources */,
+				D82042442137343B00FFF7FE /* DetailWebViewControllerLight.m in Sources */,
 				E7FD363D1DC4D07E00748177 /* main.m in Sources */,
 				B35B06431FEBBC5E007BB204 /* ContractManagerRequestAdapter.m in Sources */,
 				B365CA821EA8AA070040A163 /* WalletManagerRequestAdapter.m in Sources */,
@@ -7095,7 +7119,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -7149,7 +7173,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

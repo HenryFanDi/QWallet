@@ -51,6 +51,7 @@
 
 @protocol MainOutput;
 @protocol DetailOutput;
+@protocol DetailWebOutput;
 @protocol NewPaymentOutput;
 @protocol WalletOutput;
 @protocol TokenListOutput;
@@ -112,6 +113,8 @@
 - (NSObject <MainOutput> *)createMainViewController;
 
 - (NSObject <DetailOutput> *)createDetailViewController;
+
+- (NSObject <DetailWebOutput> *)createDetailWebViewController;
 
 - (UIViewController *)createWalletFlowController;
 
