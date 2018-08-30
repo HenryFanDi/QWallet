@@ -11,6 +11,7 @@
 
 @interface DetailViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UIView *fileImageShadowView;
 @property (weak, nonatomic) IBOutlet UIImageView *fileImageView;
 @property (weak, nonatomic) IBOutlet UILabel *sizeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *tokenLabel;
@@ -44,9 +45,9 @@
     self.fileImageView.userInteractionEnabled = YES;
     [self.fileImageView addGestureRecognizer:tapGestureRecognizer];
     
-    self.fileImageView.layer.shadowOffset = CGSizeMake(0.0f, 3.0f);
-    self.fileImageView.layer.shadowRadius = 2.0f;
-    self.fileImageView.layer.shadowOpacity = 0.5f;
+    self.fileImageShadowView.layer.shadowOffset = CGSizeMake(0.0f, 3.0f);
+    self.fileImageShadowView.layer.shadowRadius = 2.0f;
+    self.fileImageShadowView.layer.shadowOpacity = 0.5f;
 }
 
 - (void)bindViewModel {
