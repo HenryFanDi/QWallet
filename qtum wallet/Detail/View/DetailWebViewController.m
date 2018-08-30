@@ -29,7 +29,7 @@
     switch (self.type) {
         case DetailTypeFile:
             self.titleLabel.text = @"File";
-            URLString = [NSString stringWithFormat:@"https://ipfs.io/ipfs/%@", self.model.fileHash];
+            URLString = [NSString stringWithFormat:@"http://ipfs.joecwu.com:8080/ipfs/%@", self.model.fileHash];
             break;
         case DetailTypeTxID:
             self.titleLabel.text = @"Transaction ID";
