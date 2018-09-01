@@ -572,8 +572,8 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8kA-P7-dLE" userLabel="Navigation Bar Background View">
                                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20180817072800.jpeg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Xa-MI-LTA" userLabel="Title Label">
-                                                <rect key="frame" x="84" y="10.5" width="208" height="22"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="File" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Xa-MI-LTA" userLabel="Title Label">
+                                                <rect key="frame" x="166" y="10.5" width="44" height="22"/>
                                                 <fontDescription key="fontDescription" name="simplonmono-medium" family="simplonmono" pointSize="18"/>
                                                 <color key="textColor" red="0.13725490200000001" green="0.13725490200000001" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -1151,16 +1151,82 @@
             </objects>
             <point key="canvasLocation" x="159" y="643"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail Web View Controller Light-->
         <scene sceneID="0ad-ta-nWF">
             <objects>
-                <viewController id="bPG-SG-k5n" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailWebViewControllerLight" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bPG-SG-k5n" customClass="DetailWebViewControllerLight" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="U0z-pi-ank">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rpz-Pd-1cF" userLabel="Navigation Bar View">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kdn-P1-kAU" userLabel="Navigation Bar Background View">
+                                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="File" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VZG-FK-HRn" userLabel="Title Label">
+                                                <rect key="frame" x="173.5" y="12.5" width="29" height="18"/>
+                                                <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="18"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2FI-Pc-gMk" userLabel="Back Button">
+                                                <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="44" id="Mor-vc-33i"/>
+                                                    <constraint firstAttribute="width" constant="44" id="z6E-56-wPZ"/>
+                                                </constraints>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" image="back"/>
+                                                <connections>
+                                                    <action selector="backButtonDidPress:" destination="bPG-SG-k5n" eventType="touchUpInside" id="RGn-if-9mR"/>
+                                                    <action selector="backButtonDidPress:" destination="8jH-aQ-i2x" eventType="touchUpInside" id="VQ9-qN-FYI"/>
+                                                    <action selector="backButtonDidPress:" destination="waR-FV-GmP" eventType="touchUpInside" id="Ylj-if-s78"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="2FI-Pc-gMk" firstAttribute="leading" secondItem="kdn-P1-kAU" secondAttribute="leading" id="B8C-eL-esd"/>
+                                            <constraint firstAttribute="height" constant="44" id="Ge6-dH-tlI"/>
+                                            <constraint firstItem="2FI-Pc-gMk" firstAttribute="top" secondItem="kdn-P1-kAU" secondAttribute="top" id="bVv-jS-vvt"/>
+                                            <constraint firstItem="VZG-FK-HRn" firstAttribute="centerY" secondItem="kdn-P1-kAU" secondAttribute="centerY" id="frt-ED-mLr"/>
+                                            <constraint firstItem="VZG-FK-HRn" firstAttribute="centerX" secondItem="kdn-P1-kAU" secondAttribute="centerX" id="tl2-zQ-k2i"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.21176470589999999" green="0.33333333329999998" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="kdn-P1-kAU" firstAttribute="leading" secondItem="Rpz-Pd-1cF" secondAttribute="leading" id="MMF-iD-O0a"/>
+                                    <constraint firstAttribute="height" constant="64" id="aV2-I1-G1R"/>
+                                    <constraint firstAttribute="trailing" secondItem="kdn-P1-kAU" secondAttribute="trailing" id="hkZ-Zy-Xfc"/>
+                                    <constraint firstAttribute="bottom" secondItem="kdn-P1-kAU" secondAttribute="bottom" id="zAi-yI-WuO"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QXT-Bw-MTL" userLabel="WebView Background View">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Rpz-Pd-1cF" firstAttribute="top" secondItem="U0z-pi-ank" secondAttribute="top" id="Oar-MB-SgM"/>
+                            <constraint firstItem="QXT-Bw-MTL" firstAttribute="leading" secondItem="y1X-gD-0kb" secondAttribute="leading" id="X0u-Nt-fXH"/>
+                            <constraint firstItem="QXT-Bw-MTL" firstAttribute="trailing" secondItem="y1X-gD-0kb" secondAttribute="trailing" id="g86-0V-VMN"/>
+                            <constraint firstItem="QXT-Bw-MTL" firstAttribute="bottom" secondItem="y1X-gD-0kb" secondAttribute="bottom" id="k9w-VS-TLb"/>
+                            <constraint firstItem="Rpz-Pd-1cF" firstAttribute="trailing" secondItem="y1X-gD-0kb" secondAttribute="trailing" id="pRV-zg-FlY"/>
+                            <constraint firstItem="QXT-Bw-MTL" firstAttribute="top" secondItem="Rpz-Pd-1cF" secondAttribute="bottom" id="sDd-fM-t7U"/>
+                            <constraint firstItem="Rpz-Pd-1cF" firstAttribute="leading" secondItem="y1X-gD-0kb" secondAttribute="leading" id="thW-hk-tQH"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="y1X-gD-0kb"/>
                     </view>
+                    <connections>
+                        <outlet property="titleLabel" destination="VZG-FK-HRn" id="8BC-PS-MYe"/>
+                        <outlet property="webViewBackgroundView" destination="QXT-Bw-MTL" id="Qqn-pK-nle"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t6u-Va-n3w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
