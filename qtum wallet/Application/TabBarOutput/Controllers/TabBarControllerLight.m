@@ -40,7 +40,7 @@
     walletController.tabBarItem = [[UITabBarItem alloc] initWithTitle:NSLocalizedString(@"Wallet", "Tabs") image:[UIImage imageNamed:@"history"] tag:1];
     newsController.tabBarItem = [[UITabBarItem alloc] initWithTitle:NSLocalizedString(@"News", "Tabs") image:[UIImage imageNamed:@"news"] tag:2];
     sendController.tabBarItem = [[UITabBarItem alloc] initWithTitle:NSLocalizedString(@"Send", "Tabs") image:[UIImage imageNamed:@"send"] tag:3];
-    mainController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Main" image:[UIImage imageNamed:@"profile"] tag:4];
+    mainController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"BSX" image:[UIImage imageNamed:@"icon_bsx"] tag:4];
     
     [profileController.tabBarItem setTitlePositionAdjustment:UIOffsetMake (0, -3)];
     [walletController.tabBarItem setTitlePositionAdjustment:UIOffsetMake (0, -3)];
