@@ -21,6 +21,7 @@
 @property (nonatomic, strong) UINavigationController *navigationController;
 @property (nonatomic, weak) NSObject <MainOutput> *mainViewController;
 
+@property (nonatomic, strong) dispatch_queue_t mainQueue;
 @property (nonatomic, strong) MainTableSource *delegateDataSource;
     
 @end
@@ -33,6 +34,7 @@
     self = [super init];
     if (self) {
         _navigationController = navigationController;
+        _mainQueue = dispatch_queue_create("org.qtum.mainQueue", DISPATCH_QUEUE_SERIAL);
         [self setup];
     }
     return self;
@@ -47,18 +49,29 @@
     
     self.delegateDataSource = [SLocator.tableSourcesFactory mainSource];
     self.delegateDataSource.delegate = self;
-    self.delegateDataSource.files = [SLocator.fileManager readFiles];
     
     controller.tableSource = self.delegateDataSource;
     self.mainViewController = controller;
     
     [self.navigationController setViewControllers:@[[controller toPresent]]];
+    [self readFiles];
 }
 
 #pragma mark - Private Methods
 
 - (void)setup {
     self.navigationController.navigationBar.hidden = YES;
+}
+
+- (void)readFiles {
+    [self.mainViewController startLoading];
+    __weak typeof(self) weakSelf = self;
+    dispatch_async(self.mainQueue, ^{
+        __strong typeof(weakSelf) self = weakSelf;
+        self.delegateDataSource.files = [SLocator.fileManager readFiles];
+        [self.mainViewController stopLoading];
+        [self.mainViewController reloadTableView];
+    });
 }
 
 #pragma mark - MainCoordinatorDelegate
@@ -78,13 +91,10 @@
 #pragma mark - MainOutputDelegate
 
 - (void)didReloadTableViewData {
-    [self.mainViewController startLoading];
-    [self.mainViewController reloadTableView];
-//    [self.mainViewController stopLoading];
+    [self readFiles];
 }
 
 - (void)didRefreshTableViewBalanceLocal:(BOOL)isLocal {
-    
 }
 
 - (void)didUploadFile {
@@ -132,7 +142,6 @@
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
     [picker dismissViewControllerAnimated:YES completion:nil];
     
-    // TODO: To VM
     UIImage *image = info[UIImagePickerControllerOriginalImage];
     NSData *imageData = UIImageJPEGRepresentation(image, 0.1);
     NSDateFormatter *dateFormatter = [NSDateFormatter new];
@@ -141,37 +150,43 @@
     NSString *imageName = [NSString stringWithFormat:@"%@.jpg", [dateFormatter stringFromDate:currentDate]];
     
     MainRequestManager *requestManager = [MainRequestManager new];
+    
     __weak typeof(self) weakSelf = self;
-    [SLocator.popupService showLoaderPopUp];
-    [requestManager uploadFile:imageData name:imageName fileName:imageName mimeType:@"image/jpg" success:^(NSDictionary * uploadResponseObject) {
-        __strong typeof(weakSelf) self = weakSelf;
-        if ((uploadResponseObject).count == 0) {
-            return;
-        }
-        NSString *fileHash = uploadResponseObject[@"Hash"];
-        if (!fileHash) {
-            return;
-        }
-        [requestManager registerFile:fileHash success:^(NSDictionary *registerResponseObject) {
-            [requestManager getWalletBalance:^(NSDictionary *walletBalanceResponseObject) {
-                [SLocator.popupService dismissLoader];
-                
-                FileModel *file = [[FileModel alloc] initWithUploadResponseObject:uploadResponseObject registerResponseObject:registerResponseObject walletBalanceResponseObject:walletBalanceResponseObject object:image];
-                [SLocator.fileManager addNewFile:file];
-                self.delegateDataSource.files = SLocator.fileManager.files;
-                [self.mainViewController reloadTableView];
+    
+    // Upload file
+    [self.mainViewController startLoading];
+    dispatch_async(self.mainQueue, ^{
+        [requestManager uploadFile:imageData name:imageName fileName:imageName mimeType:@"image/jpg" success:^(NSDictionary * uploadResponseObject) {
+            __strong typeof(weakSelf) self = weakSelf;
+            if ((uploadResponseObject).count == 0) {
+                return;
+            }
+            NSString *fileHash = uploadResponseObject[@"Hash"];
+            if (!fileHash) {
+                return;
+            }
+            // Register
+            [requestManager registerFile:fileHash success:^(NSDictionary *registerResponseObject) {
+                // Get Wallet
+                [requestManager getWalletBalance:^(NSDictionary *walletBalanceResponseObject) {
+                    FileModel *file = [[FileModel alloc] initWithUploadResponseObject:uploadResponseObject registerResponseObject:registerResponseObject walletBalanceResponseObject:walletBalanceResponseObject object:image];
+                    [SLocator.fileManager addNewFile:file];
+                    self.delegateDataSource.files = SLocator.fileManager.files;
+                    [self.mainViewController stopLoading];
+                    [self.mainViewController reloadTableView];
+                } failure:^(NSError *error) {
+                    [self.mainViewController stopLoading];
+                    NSLog(@"Get Wallet Balance failure : %@", [error localizedDescription]);
+                }];
             } failure:^(NSError *error) {
-                [SLocator.popupService dismissLoader];
-                NSLog(@"Get Wallet Balance failure : %@", [error localizedDescription]);
+                [self.mainViewController stopLoading];
+                NSLog(@"Register failure : %@", [error localizedDescription]);
             }];
         } failure:^(NSError *error) {
-            [SLocator.popupService dismissLoader];
-            NSLog(@"Register failure : %@", [error localizedDescription]);
+            [self.mainViewController stopLoading];
+            NSLog(@"Upload failure : %@", [error localizedDescription]);
         }];
-    } failure:^(NSError *error) {
-        [SLocator.popupService dismissLoader];
-        NSLog(@"Upload failure : %@", [error localizedDescription]);
-    }];
+    });
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {

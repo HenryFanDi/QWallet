@@ -64,7 +64,11 @@
 #pragma mark - MainOutput
 
 - (void)reloadTableView {
-    [self.tableView reloadData];
+    __weak typeof(self) weakSelf = self;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        __strong typeof(weakSelf) self = weakSelf;
+        [self.tableView reloadData];
+    });
 }
 
 - (void)failedToGetData {
@@ -82,7 +86,7 @@
 }
 
 - (void)stopLoading {
-    dispatch_async (dispatch_get_main_queue (), ^{
+    dispatch_async(dispatch_get_main_queue(), ^{
         [SLocator.popupService dismissLoader];
     });
 }
