@@ -8,7 +8,6 @@
 
 #import "MainTableSourceDark.h"
 #import "WalletHeaderCellDark.h"
-#import "HistoryTableViewCellDark.h"
 #import "MainTableViewCellDark.h"
 
 @implementation MainTableSourceDark
