@@ -33,4 +33,17 @@
     [self.tableView registerNib:sectionHeaderNib forHeaderFooterViewReuseIdentifier:SectionHeaderViewIdentifier];
 }
 
+- (void)configRefreshControl {
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    self.refreshControl.tintColor = customBlackColor();
+    [self.tableView addSubview:self.refreshControl];
+    [self.refreshControl addTarget:self action:@selector(refreshFromRefreshControl) forControlEvents:UIControlEventValueChanged];
+    
+    CGRect frame = self.view.bounds;
+    frame.origin.y = -frame.size.height;
+    UIView *refreshBackgroundView = [[UIView alloc] initWithFrame:frame];
+    refreshBackgroundView.backgroundColor = customBlueColor();
+    [self.tableView insertSubview:refreshBackgroundView atIndex:0];
+}
+
 @end

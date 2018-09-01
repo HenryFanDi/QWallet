@@ -19,8 +19,11 @@
 @property (nonatomic, weak) id <MainOutputDelegate> delegate;
 @property (nonatomic, strong) MainViewControllerViewModel *viewModel;
 
+@property (nonatomic, strong) UIRefreshControl *refreshControl;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 - (void)configTableView;
+- (void)configRefreshControl;
+- (void)refreshFromRefreshControl;
 
 @end

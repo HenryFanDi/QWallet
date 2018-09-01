@@ -12,8 +12,8 @@
 @class LanguageCoordinator;
 
 @protocol MainCoordinatorDelegate <NSObject>
+- (void)refreshTableViewData;
 - (void)didSelectFileItem:(id)item;
-
 @end
 
 @interface MainCoordinator : BaseCoordinator <MainCoordinatorDelegate, Coordinatorable>

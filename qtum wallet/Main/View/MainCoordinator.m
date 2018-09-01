@@ -63,6 +63,9 @@
 
 #pragma mark - MainCoordinatorDelegate
 
+- (void)refreshTableViewData {
+}
+
 - (void)didSelectFileItem:(id)item {
     NSObject <DetailOutput> *controller = [SLocator.controllersFactory createDetailViewController];
     controller.delegate = self;
@@ -75,7 +78,9 @@
 #pragma mark - MainOutputDelegate
 
 - (void)didReloadTableViewData {
-    
+    [self.mainViewController startLoading];
+    [self.mainViewController reloadTableView];
+//    [self.mainViewController stopLoading];
 }
 
 - (void)didRefreshTableViewBalanceLocal:(BOOL)isLocal {

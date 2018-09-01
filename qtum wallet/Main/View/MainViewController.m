@@ -29,6 +29,7 @@
     [super viewDidLoad];
     
     [self configTableView];
+    [self configRefreshControl];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -39,7 +40,7 @@
     [super didReceiveMemoryWarning];
 }
 
-#pragma mark - Private Methods
+#pragma mark - Public Methods
 
 - (void)configTableView {
     self.tableView.tableFooterView = [UIView new];
@@ -48,6 +49,17 @@
     self.tableSource.tableView = self.tableView;
     self.tableSource.controllerDelegate = self;
 }
+
+- (void)configRefreshControl {
+}
+
+- (void)refreshFromRefreshControl {
+    dispatch_async (dispatch_get_main_queue (), ^{
+        [self.refreshControl endRefreshing];
+    });
+    [self.delegate didReloadTableViewData];
+}
+
 
 #pragma mark - MainOutput
 
@@ -64,11 +76,15 @@
 }
 
 - (void)startLoading {
-    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [SLocator.popupService showLoaderPopUp];
+    });
 }
 
 - (void)stopLoading {
-    
+    dispatch_async (dispatch_get_main_queue (), ^{
+        [SLocator.popupService dismissLoader];
+    });
 }
 
 #pragma mark - TableSourceDelegate
