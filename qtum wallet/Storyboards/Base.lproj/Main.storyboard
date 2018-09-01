@@ -664,8 +664,8 @@
                                                     <constraint firstAttribute="width" constant="44" id="7s3-eF-MJd"/>
                                                     <constraint firstAttribute="height" constant="44" id="o6O-TR-0Sc"/>
                                                 </constraints>
-                                                <color key="tintColor" red="0.13725490200000001" green="0.13725490200000001" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <state key="normal" image="add_plus"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" image="add_plus_white"/>
                                                 <connections>
                                                     <action selector="actionButtonDidPress:" destination="ZO8-XA-rdd" eventType="touchUpInside" id="QVb-21-PYO"/>
                                                 </connections>
@@ -740,7 +740,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <color key="separatorColor" red="0.21176470589999999" green="0.6705882353" blue="0.85098039219999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="separatorColor" red="0.8680544093" green="0.96470588239999999" blue="0.97328490020000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <inset key="separatorInset" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="WalletHeaderCellLight" rowHeight="100" id="bm0-2M-8CA" customClass="WalletHeaderCellLight">
@@ -804,42 +804,42 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="20180817072800.jpeg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TqA-qB-alA">
-                                                    <rect key="frame" x="85" y="28" width="176" height="22"/>
+                                                    <rect key="frame" x="85" y="28" width="190" height="22"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="22" id="afO-mG-eF4"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="simplonmono-medium" family="simplonmono" pointSize="14"/>
-                                                    <color key="textColor" red="0.21176470589999999" green="0.6705882353" blue="0.85098039219999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="14"/>
+                                                    <color key="textColor" red="0.30588235289999999" green="0.36470588240000001" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Size:300 KB" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WLJ-bK-36y">
-                                                    <rect key="frame" x="85" y="10" width="74" height="13"/>
+                                                    <rect key="frame" x="85" y="10" width="59" height="13"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="13" id="JcP-BK-25o"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="simplonmono-medium" family="simplonmono" pointSize="11"/>
-                                                    <color key="textColor" red="0.21176470589999999" green="0.6705882353" blue="0.85098039219999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="11"/>
+                                                    <color key="textColor" red="0.30588235289999999" green="0.36470588240000001" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aug 17" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BU6-79-n9D">
-                                                    <rect key="frame" x="324.5" y="10" width="40.5" height="13"/>
+                                                    <rect key="frame" x="333" y="10" width="32" height="13"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="13" id="OcD-hF-TnH"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="simplonmono-regular" family="simplonmono" pointSize="11"/>
-                                                    <color key="textColor" red="0.18039215689999999" green="0.60392156860000001" blue="0.81568627449999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="11"/>
+                                                    <color key="textColor" red="0.30588235289999999" green="0.36470588240000001" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="+168.00 BSX" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gEb-HL-TbG">
-                                                    <rect key="frame" x="271" y="28" width="94" height="22"/>
+                                                    <rect key="frame" x="285" y="28" width="80" height="22"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="22" id="1ri-Pv-Gvx"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="simplonmono-medium" family="simplonmono" pointSize="14"/>
-                                                    <color key="textColor" red="0.21176470589999999" green="0.6705882353" blue="0.85098039219999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="14"/>
+                                                    <color key="textColor" red="0.30588235289999999" green="0.36470588240000001" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tx:077af79620dc471d96625ba5ac3b1b245ccddacc4d5762b7114ec8016e1a9daf" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4IG-az-M7u" customClass="CopyLabel">
@@ -848,12 +848,12 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="16" id="zOl-y0-6yn"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="simplonmono-medium" family="simplonmono" pointSize="12"/>
-                                                    <color key="textColor" red="0.18039215689999999" green="0.60392156860000001" blue="0.81568627449999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="12"/>
+                                                    <color key="textColor" red="0.30588235289999999" green="0.36470588240000001" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" red="0.13725490200000001" green="0.13725490200000001" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstItem="GT7-gl-FFF" firstAttribute="top" secondItem="pLF-fO-DPz" secondAttribute="top" constant="10" id="7FS-D3-uQa"/>
                                                 <constraint firstItem="4IG-az-M7u" firstAttribute="top" secondItem="gEb-HL-TbG" secondAttribute="bottom" constant="2" id="8qC-Hi-mSX"/>
@@ -875,7 +875,7 @@
                                                 <constraint firstItem="TqA-qB-alA" firstAttribute="leading" secondItem="GT7-gl-FFF" secondAttribute="trailing" constant="15" id="xvP-fb-t1c"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.13725490200000001" green="0.13725490200000001" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <outlet property="fileImageView" destination="GT7-gl-FFF" id="Gu6-Ej-y4U"/>
                                             <outlet property="fileNameLabel" destination="TqA-qB-alA" id="Cle-MW-DEe"/>
@@ -971,6 +971,7 @@
     </scenes>
     <resources>
         <image name="add_plus" width="17" height="17"/>
+        <image name="add_plus_white" width="17" height="17"/>
         <image name="back" width="11" height="20"/>
         <image name="btn_right_arrow" width="16" height="16"/>
     </resources>

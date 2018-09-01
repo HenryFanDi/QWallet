@@ -19,5 +19,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *txLabel;
 
 - (void)configure:(MainTableViewCellViewModel *)viewModel;
+- (void)setup;
 
 @end

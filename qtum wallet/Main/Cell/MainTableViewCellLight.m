@@ -10,15 +10,23 @@
 
 @implementation MainTableViewCellLight
 
+#pragma mark - Lifecycle
+
 - (void)awakeFromNib {
     [super awakeFromNib];
-    // Initialization code
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
+}
 
-    // Configure the view for the selected state
+#pragma mark - Public Methods
+
+- (void)setup {
+    [super setup];
+    
+    self.fileImageView.layer.borderColor = [UIColor colorWithRed:211.0f/255.0f green:246.0f/255.0f blue:248.0f/255.0f alpha:1.0f].CGColor;
+    self.fileImageView.layer.borderWidth = 1.0f;
 }
 
 @end
