@@ -143,7 +143,7 @@
     [picker dismissViewControllerAnimated:YES completion:nil];
     
     UIImage *image = info[UIImagePickerControllerOriginalImage];
-    NSData *imageData = UIImageJPEGRepresentation(image, 0.1);
+    NSData *imageData = UIImagePNGRepresentation(image);
     NSDateFormatter *dateFormatter = [NSDateFormatter new];
     dateFormatter.dateFormat = @"yyyyMMddHHmmss";
     NSDate *currentDate = [NSDate date];

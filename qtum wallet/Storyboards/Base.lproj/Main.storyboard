@@ -377,13 +377,27 @@
                                                     <action selector="backButtonDidPress:" destination="8jH-aQ-i2x" eventType="touchUpInside" id="v8G-rL-TIo"/>
                                                 </connections>
                                             </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SSZ-qh-9wB" userLabel="Action Button">
+                                                <rect key="frame" x="331" y="0.0" width="44" height="44"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="44" id="pBI-2B-4BT"/>
+                                                    <constraint firstAttribute="height" constant="44" id="qrJ-nZ-KY9"/>
+                                                </constraints>
+                                                <color key="tintColor" red="0.13725490200000001" green="0.13725490200000001" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" image="share-1"/>
+                                                <connections>
+                                                    <action selector="shareButtonDidPress:" destination="8jH-aQ-i2x" eventType="touchUpInside" id="6VV-nC-5ck"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
+                                            <constraint firstItem="SSZ-qh-9wB" firstAttribute="top" secondItem="kMa-sl-iwR" secondAttribute="top" id="FbS-Lb-CLw"/>
                                             <constraint firstItem="1nF-fm-iod" firstAttribute="centerY" secondItem="kMa-sl-iwR" secondAttribute="centerY" id="HcG-YC-pnE"/>
                                             <constraint firstAttribute="height" constant="44" id="Ohz-iq-HrK"/>
                                             <constraint firstItem="jCm-qU-kca" firstAttribute="top" secondItem="kMa-sl-iwR" secondAttribute="top" id="XgB-yB-JGE"/>
+                                            <constraint firstAttribute="trailing" secondItem="SSZ-qh-9wB" secondAttribute="trailing" id="jiL-gL-ndU"/>
                                             <constraint firstItem="1nF-fm-iod" firstAttribute="centerX" secondItem="kMa-sl-iwR" secondAttribute="centerX" id="nfP-N5-bey"/>
                                             <constraint firstItem="jCm-qU-kca" firstAttribute="leading" secondItem="kMa-sl-iwR" secondAttribute="leading" id="vyR-ra-SyC"/>
                                         </constraints>
@@ -970,15 +984,29 @@
                                                     <action selector="backButtonDidPress:" destination="XIt-m2-vgr" eventType="touchUpInside" id="Mjc-fo-y05"/>
                                                 </connections>
                                             </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B1H-K3-s2s" userLabel="Action Button">
+                                                <rect key="frame" x="331" y="0.0" width="44" height="44"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="44" id="kF5-Mi-ZEM"/>
+                                                    <constraint firstAttribute="height" constant="44" id="rvw-iI-1GU"/>
+                                                </constraints>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" image="share_white"/>
+                                                <connections>
+                                                    <action selector="shareButtonDidPress:" destination="XIt-m2-vgr" eventType="touchUpInside" id="Rw6-Ra-Df1"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
+                                            <constraint firstItem="B1H-K3-s2s" firstAttribute="top" secondItem="y1D-jA-U7G" secondAttribute="top" id="E2M-KY-Zba"/>
                                             <constraint firstItem="LLI-Ve-f0F" firstAttribute="top" secondItem="y1D-jA-U7G" secondAttribute="top" id="Ibn-4X-uVd"/>
                                             <constraint firstItem="KBZ-9q-52u" firstAttribute="centerX" secondItem="y1D-jA-U7G" secondAttribute="centerX" id="NK7-Kc-TT3"/>
                                             <constraint firstAttribute="height" constant="44" id="O2s-mv-3nl"/>
                                             <constraint firstItem="KBZ-9q-52u" firstAttribute="centerY" secondItem="y1D-jA-U7G" secondAttribute="centerY" id="TDh-IV-jHk"/>
                                             <constraint firstItem="LLI-Ve-f0F" firstAttribute="leading" secondItem="y1D-jA-U7G" secondAttribute="leading" id="Tcg-MD-qo3"/>
+                                            <constraint firstAttribute="trailing" secondItem="B1H-K3-s2s" secondAttribute="trailing" id="iH2-Ka-0jM"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -1238,5 +1266,7 @@
         <image name="add_plus_white" width="17" height="17"/>
         <image name="back" width="11" height="20"/>
         <image name="btn_right_arrow" width="16" height="16"/>
+        <image name="share-1" width="17" height="17"/>
+        <image name="share_white" width="17" height="17"/>
     </resources>
 </document>

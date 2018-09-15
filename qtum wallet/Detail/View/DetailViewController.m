@@ -80,4 +80,22 @@
     [self.navigationController pushViewController:[controller toPresent] animated:YES];
 }
 
+- (IBAction)shareButtonDidPress:(id)sender {
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Share file" message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+    
+    UIAlertAction *libraryAction = [UIAlertAction actionWithTitle:@"Free share" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+    }];
+    
+    UIAlertAction *cameraAction = [UIAlertAction actionWithTitle:@"Share with License" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+    }];
+    
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
+    }];
+    
+    [alertController addAction:libraryAction];
+    [alertController addAction:cameraAction];
+    [alertController addAction:cancelAction];
+    [self presentViewController:alertController animated:YES completion:nil];
+}
+
 @end
