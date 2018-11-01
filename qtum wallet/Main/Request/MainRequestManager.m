@@ -13,9 +13,9 @@
 @interface MainRequestManager ()
 @end
 
-static NSString * const kBSXUploadURL = @"http://ipfs.joecwu.com:5001/api/v0/add";
-static NSString * const kBSXRegisterURL = @"http://ipfs.joecwu.com:6000/register";
-static NSString * const kBSXGetWalletBalanceURL = @"http://ipfs.joecwu.com:6000/balance";
+static NSString * const kBSXUploadURL = @"http://ipfs.comehere.app/api/v0/add";
+static NSString * const kBSXRegisterURL = @"http://qtum.comehere.app/register";
+static NSString * const kBSXGetWalletBalanceURL = @"http://qtum.comehere.app/balance";
 
 @implementation MainRequestManager
 
