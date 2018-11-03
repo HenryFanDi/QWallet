@@ -69,7 +69,8 @@ NSString *const kSocketDidDisconnect = @"kSocketDidDisconnect";
 	dispatch_block_t block = ^{
 
 		NSURL *url = [[NSURL alloc] initWithString:[self baseURL]];
-		weakSelf.currentSocket = [[SocketIOClient alloc] initWithSocketURL:url config:@{@"log": @YES, @"forcePolling": @YES}];
+        SocketManager *manager = [[SocketManager alloc] initWithSocketURL:url config:@{@"log": @YES, @"forcePolling": @YES}];
+        weakSelf.currentSocket = manager.defaultSocket;
 		weakSelf.onConnected = handler;
 
 		dispatch_semaphore_t semaphore = dispatch_semaphore_create (0);

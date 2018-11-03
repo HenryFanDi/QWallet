@@ -497,6 +497,8 @@
 		D899F8D2212B828B002AFE14 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D899F8D1212B828B002AFE14 /* DetailViewController.m */; };
 		D8BC6CFD212B842D00BDFE01 /* DetailViewControllerDark.m in Sources */ = {isa = PBXBuildFile; fileRef = D8BC6CFC212B842D00BDFE01 /* DetailViewControllerDark.m */; };
 		D8BC6D00212B844100BDFE01 /* DetailViewControllerLight.m in Sources */ = {isa = PBXBuildFile; fileRef = D8BC6CFF212B844100BDFE01 /* DetailViewControllerLight.m */; };
+		D8CA1470218D3AE9005E0ABA /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8CA146D218D3A7A005E0ABA /* Starscream.framework */; };
+		D8CA1471218D3B22005E0ABA /* Starscream.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = D8CA146D218D3A7A005E0ABA /* Starscream.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D8EDB03D2134BF41000A50A5 /* DetailWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8EDB03C2134BF41000A50A5 /* DetailWebViewController.m */; };
 		D8EDB03F2134C0AC000A50A5 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8EDB03E2134C0AC000A50A5 /* WebKit.framework */; };
 		D8F576BE2127B648007A6263 /* MainRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F576BD2127B648007A6263 /* MainRequestManager.m */; };
@@ -734,6 +736,17 @@
 				B33EAF971E5EC263006125F3 /* iMessageExtension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8CA146F218D3ABA005E0ABA /* Copy Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D8CA1471218D3B22005E0ABA /* Starscream.framework in Copy Frameworks */,
+			);
+			name = "Copy Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		E730AB7E1EE6A5D200132711 /* Embed App Extensions */ = {
@@ -1861,6 +1874,7 @@
 		D8BC6CFC212B842D00BDFE01 /* DetailViewControllerDark.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewControllerDark.m; sourceTree = "<group>"; };
 		D8BC6CFE212B844100BDFE01 /* DetailViewControllerLight.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewControllerLight.h; sourceTree = "<group>"; };
 		D8BC6CFF212B844100BDFE01 /* DetailViewControllerLight.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewControllerLight.m; sourceTree = "<group>"; };
+		D8CA146D218D3A7A005E0ABA /* Starscream.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Starscream.framework; path = Carthage/Build/iOS/Starscream.framework; sourceTree = "<group>"; };
 		D8EDB03B2134BF41000A50A5 /* DetailWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailWebViewController.h; sourceTree = "<group>"; };
 		D8EDB03C2134BF41000A50A5 /* DetailWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailWebViewController.m; sourceTree = "<group>"; };
 		D8EDB03E2134C0AC000A50A5 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
@@ -2288,6 +2302,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8CA1470218D3AE9005E0ABA /* Starscream.framework in Frameworks */,
 				D8EDB03F2134C0AC000A50A5 /* WebKit.framework in Frameworks */,
 				B35733341F97B3A700C64AAE /* libxml2.tbd in Frameworks */,
 				B3FD74C91FE9456C00B1E1EA /* libxml2.dylib in Frameworks */,
@@ -5457,6 +5472,7 @@
 		F94C279886F936AB7B4DA6F8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D8CA146D218D3A7A005E0ABA /* Starscream.framework */,
 				D8EDB03E2134C0AC000A50A5 /* WebKit.framework */,
 				B3FD74C81FE9456C00B1E1EA /* libxml2.dylib */,
 				B35733331F97B3A700C64AAE /* libxml2.tbd */,
@@ -5562,6 +5578,7 @@
 				B3C8566C1FD577E900DAD5F4 /* ShellScript */,
 				E730AB801EE6A5D200132711 /* Embed Watch Content */,
 				D861428721152492008AB18B /* ShellScript */,
+				D8CA146F218D3ABA005E0ABA /* Copy Frameworks */,
 			);
 			buildRules = (
 			);
