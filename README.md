@@ -28,7 +28,6 @@ You can install Carthage with [Homebrew](http://brew.sh/) using the following co
 $ brew update
 $ brew install carthage
 ```
-
 Using Terminal open project folder and enter following command to load and connect required libraries
 
 ```bash
@@ -95,3 +94,16 @@ CoreBitcoin deliberately implements as much as possible directly in Objective-C 
 
 Link: https://github.com/oleganza/CoreBitcoin
 
+## Note
+
+If you get the error when you're building the app:
+
+```bash
+dyld: Library not loaded: @rpath/Starscream.framework/Starscream
+  Referenced from: /private/var/containers/Bundle/Application/BCA359BD-6E7C-469A-9F18-28D2E8A02F58/qtum wallet.app/Frameworks/SocketIO.framework/SocketIO
+  Reason: image not found
+```
+
+You can follow the link which provides the steps to tell you how to fix it:
+
+https://github.com/daltoniam/Starscream#add-copy-frameworks-phase
