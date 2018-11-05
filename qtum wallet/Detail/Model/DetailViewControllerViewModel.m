@@ -28,7 +28,7 @@
         self.titleLabelString = model.name;
         self.fileImage = model.object;
         self.sizeLabelString = [NSString stringWithFormat:@"%.2f KB", model.size.floatValue / 1000];
-        self.tokenLabelString = [NSString stringWithFormat:@"%+.2f BSX", model.balance.floatValue];
+        self.tokenLabelString = @"+168.00 BSX";
         self.txLabelString = [NSString stringWithFormat:@"%@", model.txID];
     }
     return self;

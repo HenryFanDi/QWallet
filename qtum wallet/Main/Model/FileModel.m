@@ -15,8 +15,6 @@
 @property (nonatomic, strong, readwrite) NSString *txID;
 @property (nonatomic, strong, readwrite) NSString *time;
 @property (nonatomic, strong, readwrite, nullable) id object;
-@property (nonatomic, strong, readwrite) NSString *wallet;
-@property (nonatomic, strong, readwrite) NSNumber *balance;
 @end
 
 @implementation FileModel
@@ -25,7 +23,6 @@
 
 - (instancetype)initWithUploadResponseObject:(NSDictionary *)uploadResponseObject
                       registerResponseObject:(NSDictionary *)registerResponseObject
-                 walletBalanceResponseObject:(NSDictionary *)walletBalanceResponseObject
                                       object:(nullable id)object {
     self = [super init];
     if (self) {
@@ -44,8 +41,6 @@
         if (object) {
             self.object = object;
         }
-        self.wallet = walletBalanceResponseObject[@"wallet"] ? : @"";
-        self.balance = walletBalanceResponseObject[@"balance"] ? [NSNumber numberWithInteger:[walletBalanceResponseObject[@"balance"] floatValue]] : @(0.0);
     }
     return self;
 }
@@ -61,8 +56,6 @@
         self.txID = [aDecoder decodeObjectForKey:@"txID"];
         self.time = [aDecoder decodeObjectForKey:@"time"];
         self.object = [aDecoder decodeObjectForKey:@"object"];
-        self.wallet = [aDecoder decodeObjectForKey:@"wallet"];
-        self.balance = [aDecoder decodeObjectForKey:@"balance"];
     }
     return self;
 }
@@ -74,8 +67,6 @@
     [coder encodeObject:self.txID forKey:@"txID"];
     [coder encodeObject:self.time forKey:@"time"];
     [coder encodeObject:self.object forKey:@"object"];
-    [coder encodeObject:self.wallet forKey:@"wallet"];
-    [coder encodeObject:self.balance forKey:@"balance"];
 }
 
 #pragma mark - Private Methods

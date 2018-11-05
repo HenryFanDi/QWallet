@@ -11,8 +11,6 @@
 @protocol MainOutputDelegate <NSObject>
 
 @required
-- (void)didReloadTableViewData;
-
 - (void)didRefreshTableViewBalanceLocal:(BOOL)isLocal;
 
 - (void)didUploadFile;

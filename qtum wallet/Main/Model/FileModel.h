@@ -15,12 +15,9 @@
 @property (nonatomic, strong, readonly) NSString *txID;
 @property (nonatomic, strong, readonly) NSString *time;
 @property (nonatomic, strong, readonly, nullable) id object;
-@property (nonatomic, strong, readonly) NSString *wallet;
-@property (nonatomic, strong, readonly) NSNumber *balance;
 
 - (instancetype)initWithUploadResponseObject:(NSDictionary *)uploadResponseObject
                       registerResponseObject:(NSDictionary *)registerResponseObject
-                 walletBalanceResponseObject:(NSDictionary *)walletBalanceResponseObject
                                       object:(nullable id)object;
 
 @end

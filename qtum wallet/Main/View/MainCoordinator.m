@@ -44,7 +44,7 @@
     NSObject <MainOutput> *controller = [SLocator.controllersFactory createMainViewController];
     controller.delegate = self;
     
-    MainViewControllerViewModel *viewModel = [[MainViewControllerViewModel alloc] init];
+    MainViewControllerViewModel *viewModel = [[MainViewControllerViewModel alloc] initWithViewController:(MainViewController *)controller];
     controller.viewModel = viewModel;
     
     self.delegateDataSource = [SLocator.tableSourcesFactory mainSource];
@@ -54,24 +54,13 @@
     self.mainViewController = controller;
     
     [self.navigationController setViewControllers:@[[controller toPresent]]];
-    [self readFiles];
+    [self.mainViewController updateWallet];
 }
 
 #pragma mark - Private Methods
 
 - (void)setup {
     self.navigationController.navigationBar.hidden = YES;
-}
-
-- (void)readFiles {
-    [self.mainViewController startLoading];
-    __weak typeof(self) weakSelf = self;
-    dispatch_async(self.mainQueue, ^{
-        __strong typeof(weakSelf) self = weakSelf;
-        self.delegateDataSource.files = [SLocator.fileManager readFiles];
-        [self.mainViewController stopLoading];
-        [self.mainViewController reloadTableView];
-    });
 }
 
 #pragma mark - MainCoordinatorDelegate
@@ -89,10 +78,6 @@
 }
 
 #pragma mark - MainOutputDelegate
-
-- (void)didReloadTableViewData {
-    [self readFiles];
-}
 
 - (void)didRefreshTableViewBalanceLocal:(BOOL)isLocal {
 }
@@ -167,22 +152,17 @@
             }
             // Register
             [requestManager registerFile:fileHash success:^(NSDictionary *registerResponseObject) {
-                // Get Wallet
-                [requestManager getWalletBalance:^(NSDictionary *walletBalanceResponseObject) {
-                    FileModel *file = [[FileModel alloc] initWithUploadResponseObject:uploadResponseObject registerResponseObject:registerResponseObject walletBalanceResponseObject:walletBalanceResponseObject object:image];
-                    [SLocator.fileManager addNewFile:file];
-                    self.delegateDataSource.files = SLocator.fileManager.files;
-                    [self.mainViewController stopLoading];
-                    [self.mainViewController reloadTableView];
-                } failure:^(NSError *error) {
-                    [self.mainViewController stopLoading];
-                    NSLog(@"Get Wallet Balance failure : %@", [error localizedDescription]);
-                }];
+                [self.mainViewController stopLoading];
+                FileModel *file = [[FileModel alloc] initWithUploadResponseObject:uploadResponseObject registerResponseObject:registerResponseObject object:image];
+                [SLocator.fileManager addNewFile:file];
+                [self.mainViewController updateWallet];
             } failure:^(NSError *error) {
+                __strong typeof(weakSelf) self = weakSelf;
                 [self.mainViewController stopLoading];
                 NSLog(@"Register failure : %@", [error localizedDescription]);
             }];
         } failure:^(NSError *error) {
+            __strong typeof(weakSelf) self = weakSelf;
             [self.mainViewController stopLoading];
             NSLog(@"Upload failure : %@", [error localizedDescription]);
         }];

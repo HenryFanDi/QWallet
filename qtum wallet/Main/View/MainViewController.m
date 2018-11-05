@@ -8,6 +8,7 @@
 
 #import "MainViewController.h"
 #import "MainRequestManager.h"
+#import "MainViewControllerViewModel.h"
 
 @interface MainViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
@@ -54,14 +55,31 @@
 }
 
 - (void)refreshFromRefreshControl {
-    dispatch_async (dispatch_get_main_queue (), ^{
+    dispatch_async(dispatch_get_main_queue(), ^{
         [self.refreshControl endRefreshing];
     });
-    [self.delegate didReloadTableViewData];
+    [self updateWallet];
 }
 
-
 #pragma mark - MainOutput
+
+- (void)updateWallet {
+    [self startLoading];
+    
+    __weak typeof(self) weakSelf = self;
+    [self.viewModel getWalletBalance:^(NSNumber *balance) {
+        __strong typeof(weakSelf) self = weakSelf;
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.tableSource.files = [SLocator.fileManager readFiles];
+            [self.tableSource updateAvailableBalance:balance];
+            [self stopLoading];
+            [self reloadTableView];
+        });
+    } failure:^{
+        __strong typeof(weakSelf) self = weakSelf;
+        [self stopLoading];
+    }];
+}
 
 - (void)reloadTableView {
     __weak typeof(self) weakSelf = self;
@@ -72,11 +90,9 @@
 }
 
 - (void)failedToGetData {
-    
 }
 
 - (void)failedToGetBalance {
-    
 }
 
 - (void)startLoading {
@@ -111,15 +127,6 @@
 
 - (IBAction)actionButtonDidPress:(id)sender {
     [self.delegate didUploadFile];
-}
-
-#pragma mark - Accessors
-
-- (MainViewControllerViewModel *)viewModel {
-    if (!_viewModel) {
-        _viewModel = [[MainViewControllerViewModel alloc] init];
-    }
-    return _viewModel;
 }
 
 @end

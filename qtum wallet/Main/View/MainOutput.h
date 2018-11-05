@@ -8,15 +8,17 @@
 
 #import <Foundation/Foundation.h>
 #import "MainOutputDelegate.h"
-#import "MainViewControllerViewModel.h"
 
 @class MainTableSource;
+@class MainViewControllerViewModel;
 
 @protocol MainOutput <NSObject>
 
 @property (nonatomic, strong) MainTableSource *tableSource;
 @property (nonatomic, weak) id <MainOutputDelegate> delegate;
 @property (nonatomic, strong) MainViewControllerViewModel *viewModel;
+
+- (void)updateWallet;
 
 - (void)reloadTableView;
 

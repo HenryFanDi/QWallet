@@ -8,6 +8,17 @@
 
 #import <Foundation/Foundation.h>
 
+@class MainViewController;
+
 @interface MainViewControllerViewModel : NSObject
+
+- (instancetype)init NS_UNAVAILABLE;
++ (instancetype)new NS_UNAVAILABLE;
+
+- (instancetype)initWithViewController:(MainViewController *)viewController;
+
+@property (nonatomic, strong, readonly) NSString *walletAddress;
+
+- (void)getWalletBalance:(void (^)(NSNumber *balance))success failure:(void (^)(void))failure;
 
 @end

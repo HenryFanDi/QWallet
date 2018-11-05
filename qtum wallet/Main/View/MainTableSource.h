@@ -34,4 +34,6 @@
 
 - (void)didScrollForheaderCell:(UIScrollView *)scrollView;
 
+- (void)updateAvailableBalance:(NSNumber *)balance;
+
 @end

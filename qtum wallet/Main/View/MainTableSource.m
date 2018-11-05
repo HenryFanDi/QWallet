@@ -109,4 +109,10 @@ static NSInteger countOfSections = 2;
     }
 }
 
+#pragma mark - Public Methods
+
+- (void)updateAvailableBalance:(NSNumber *)balance {
+    self.mainCell.valueLabel.text = [NSString stringWithFormat:@"%.2f BSX", [balance floatValue]];
+}
+
 @end

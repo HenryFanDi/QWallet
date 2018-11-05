@@ -35,14 +35,6 @@
         WalletHeaderCellLight *cell = [tableView dequeueReusableCellWithIdentifier:@"WalletHeaderCellLight"];
         [cell setCellType:[self headerCellType]];
         [self didScrollForheaderCell:tableView];
-        
-        NSArray <FileModel *> *files = self.files;
-        CGFloat totalValue = 0.0f;
-        for (FileModel *file in files) {
-            totalValue += file.balance.floatValue;
-        }
-        
-        cell.valueLabel.text = [NSString stringWithFormat:@"%.2f BSX", totalValue];
         self.mainCell = cell;
         return cell;
     } else {
