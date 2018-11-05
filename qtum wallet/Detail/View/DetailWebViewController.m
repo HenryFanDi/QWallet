@@ -33,7 +33,7 @@
             break;
         case DetailTypeTxID:
             self.titleLabel.text = @"Transaction ID";
-            URLString = [NSString stringWithFormat:@"https://testnet.qtum.org/tx/%@", self.model.txID];
+            URLString = [NSString stringWithFormat:@"https://testnet.qtum.info/tx/%@", self.model.txID];
             break;
     }
     
