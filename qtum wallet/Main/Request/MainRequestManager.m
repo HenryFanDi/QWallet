@@ -48,7 +48,7 @@ static NSString * const kBSXGetWalletBalanceURL = @"http://qtum.comehere.app/bal
 
 - (void)getWalletBalance:(void (^)(id responseObject))success failure:(void (^)(NSError *error))failure {
     MainNetworkingService *networkService = [[MainNetworkingService alloc] initWithBaseUrl:kBSXGetWalletBalanceURL];
-    NSString *walletAddress = @"qVuqcjpBmRYGjjVZm1q1LFa28KJGQYPepC";
+    NSString *walletAddress = @"qR7LMJGTNTktrhd5AUeyNkGQNAnPzdX5eu";
     [networkService requestWithType:GET path:walletAddress andParams:nil withSuccessHandler:^(id  _Nonnull responseObject) {
         success(responseObject);
     } andFailureHandler:^(NSError * _Nonnull error, NSString * _Nullable message) {
