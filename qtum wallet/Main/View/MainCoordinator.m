@@ -16,6 +16,7 @@
 
 #import "FileModel.h"
 #import "FileManager.h"
+#import "ConfirmPopUpViewController.h"
 
 @interface MainCoordinator () <MainOutputDelegate, DetailOutputDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 @property (nonatomic, strong) UINavigationController *navigationController;
@@ -83,7 +84,7 @@
 }
 
 - (void)didUploadFile {
-    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Upload file" message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Share file" message:nil preferredStyle:UIAlertControllerStyleActionSheet];
     
     UIAlertAction *libraryAction = [UIAlertAction actionWithTitle:@"Library" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
         [self openLibrary];
@@ -125,9 +126,31 @@
 #pragma mark - UIImagePickerControllerDelegate
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
-    [picker dismissViewControllerAnimated:YES completion:nil];
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Share file" message:@"How would you like to share your file?" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *freeAction = [UIAlertAction actionWithTitle:@"Share for free" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        [picker dismissViewControllerAnimated:YES completion:^{
+            [self uploadAndRegisterFileWithImage:info[UIImagePickerControllerOriginalImage]];
+        }];
+    }];
     
-    UIImage *image = info[UIImagePickerControllerOriginalImage];
+    UIAlertAction *licenseAction = [UIAlertAction actionWithTitle:@"Share for License" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        [picker dismissViewControllerAnimated:YES completion:^{
+            [self uploadAndRegisterFileWithImage:info[UIImagePickerControllerOriginalImage]];
+        }];
+    }];
+    
+    [alertController addAction:freeAction];
+    [alertController addAction:licenseAction];
+    [picker presentViewController:alertController animated:YES completion:nil];
+}
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+    [picker dismissViewControllerAnimated:YES completion:nil];
+}
+
+#pragma mark - Private Methods
+
+- (void)uploadAndRegisterFileWithImage:(UIImage *)image {
     NSData *imageData = UIImageJPEGRepresentation(image, 0.1);
     NSDateFormatter *dateFormatter = [NSDateFormatter new];
     dateFormatter.dateFormat = @"yyyyMMddHHmmss";
@@ -150,7 +173,7 @@
             if (!fileHash) {
                 return;
             }
-            // Register
+            // Register file
             [requestManager registerFile:fileHash success:^(NSDictionary *registerResponseObject) {
                 [self.mainViewController stopLoading];
                 FileModel *file = [[FileModel alloc] initWithUploadResponseObject:uploadResponseObject registerResponseObject:registerResponseObject object:image];
@@ -167,10 +190,6 @@
             NSLog(@"Upload failure : %@", [error localizedDescription]);
         }];
     });
-}
-
-- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
-    [picker dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark - DetailOutputDelegate

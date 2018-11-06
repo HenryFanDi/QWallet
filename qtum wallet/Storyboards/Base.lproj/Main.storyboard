@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aVX-CL-kYH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aVX-CL-kYH">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment version="2304" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -43,7 +42,7 @@
                                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My BSX" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SDZ-id-xS3" userLabel="Title Label">
-                                                <rect key="frame" x="157.5" y="10" width="61.5" height="23"/>
+                                                <rect key="frame" x="157" y="10.5" width="61.5" height="23"/>
                                                 <fontDescription key="fontDescription" name="euclidflexmedium" family="euclidflexmedium" pointSize="18"/>
                                                 <color key="textColor" red="0.13725490200000001" green="0.13725490200000001" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -360,7 +359,7 @@
                                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20180817072800.jpeg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1nF-fm-iod" userLabel="Title Label">
-                                                <rect key="frame" x="84" y="10.5" width="208" height="22"/>
+                                                <rect key="frame" x="83.5" y="11" width="208" height="22"/>
                                                 <fontDescription key="fontDescription" name="simplonmono-medium" family="simplonmono" pointSize="18"/>
                                                 <color key="textColor" red="0.13725490200000001" green="0.13725490200000001" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -377,7 +376,7 @@
                                                     <action selector="backButtonDidPress:" destination="8jH-aQ-i2x" eventType="touchUpInside" id="v8G-rL-TIo"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SSZ-qh-9wB" userLabel="Action Button">
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SSZ-qh-9wB" userLabel="Action Button">
                                                 <rect key="frame" x="331" y="0.0" width="44" height="44"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="44" id="pBI-2B-4BT"/>
@@ -427,7 +426,7 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+168.00 BSX" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JAk-kO-qPF" userLabel="Token Label">
-                                        <rect key="frame" x="133.5" y="373" width="107.5" height="20"/>
+                                        <rect key="frame" x="134" y="373" width="107.5" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="2M3-v3-2iY"/>
                                         </constraints>
@@ -436,7 +435,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Size:300 KB" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oOA-gm-Vz7">
-                                        <rect key="frame" x="150" y="394" width="74" height="13"/>
+                                        <rect key="frame" x="150.5" y="394" width="74" height="13"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="13" id="IH0-3V-nSy"/>
                                         </constraints>
@@ -587,7 +586,7 @@
                                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="File" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Xa-MI-LTA" userLabel="Title Label">
-                                                <rect key="frame" x="166" y="10.5" width="44" height="22"/>
+                                                <rect key="frame" x="165.5" y="11" width="44" height="22"/>
                                                 <fontDescription key="fontDescription" name="simplonmono-medium" family="simplonmono" pointSize="18"/>
                                                 <color key="textColor" red="0.13725490200000001" green="0.13725490200000001" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -667,7 +666,7 @@
                                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My BSX" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W5F-YB-QdF" userLabel="Title Label">
-                                                <rect key="frame" x="156" y="12.5" width="63" height="18"/>
+                                                <rect key="frame" x="156" y="13" width="63" height="18"/>
                                                 <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="18"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -768,7 +767,7 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00 BSX" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TKG-27-wuj">
-                                                            <rect key="frame" x="129" y="20" width="118" height="28"/>
+                                                            <rect key="frame" x="128.5" y="20" width="118" height="28"/>
                                                             <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="28"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
@@ -967,7 +966,7 @@
                                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20180817072800.jpeg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KBZ-9q-52u" userLabel="Title Label">
-                                                <rect key="frame" x="97" y="12.5" width="182" height="18"/>
+                                                <rect key="frame" x="96.5" y="13" width="182" height="18"/>
                                                 <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="18"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -984,7 +983,7 @@
                                                     <action selector="backButtonDidPress:" destination="XIt-m2-vgr" eventType="touchUpInside" id="Mjc-fo-y05"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B1H-K3-s2s" userLabel="Action Button">
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B1H-K3-s2s" userLabel="Action Button">
                                                 <rect key="frame" x="331" y="0.0" width="44" height="44"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="44" id="kF5-Mi-ZEM"/>
@@ -1043,7 +1042,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Size:300 KB" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KUy-Lh-q5u">
-                                        <rect key="frame" x="157.5" y="394" width="59" height="13"/>
+                                        <rect key="frame" x="158" y="394" width="59" height="13"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="13" id="MEq-93-Zpk"/>
                                         </constraints>
@@ -1194,7 +1193,7 @@
                                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="File" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VZG-FK-HRn" userLabel="Title Label">
-                                                <rect key="frame" x="173.5" y="12.5" width="29" height="18"/>
+                                                <rect key="frame" x="173" y="13" width="29" height="18"/>
                                                 <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="18"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -1263,10 +1262,10 @@
     </scenes>
     <resources>
         <image name="add_plus" width="17" height="17"/>
-        <image name="add_plus_white" width="17" height="17"/>
+        <image name="add_plus_white" width="27.200000762939453" height="27.200000762939453"/>
         <image name="back" width="11" height="20"/>
-        <image name="btn_right_arrow" width="16" height="16"/>
-        <image name="share-1" width="17" height="17"/>
-        <image name="share_white" width="17" height="17"/>
+        <image name="btn_right_arrow" width="25.600000381469727" height="25.600000381469727"/>
+        <image name="share-1" width="27.200000762939453" height="27.200000762939453"/>
+        <image name="share_white" width="27.200000762939453" height="27.200000762939453"/>
     </resources>
 </document>
